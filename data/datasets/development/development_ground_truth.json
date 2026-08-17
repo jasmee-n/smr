@@ -1,0 +1,79 @@
+[
+  {
+    "patient_id": "DEV001",
+    "scenario": "baseline"
+  },
+  {
+    "patient_id": "DEV002",
+    "scenario": "single_ddi",
+    "interaction": [
+      "Apixaban + Aspirin"
+    ]
+  },
+  {
+    "patient_id": "DEV003",
+    "scenario": "multiple_ddi",
+    "interaction": [
+      "Sertraline + Tramadol"
+    ]
+  },
+  {
+    "patient_id": "DEV004",
+    "scenario": "stopp",
+    "risk": [
+      "Falls risk"
+    ],
+    "deprescribing": [
+      "Diazepam review"
+    ]
+  },
+  {
+    "patient_id": "DEV005",
+    "scenario": "start",
+    "start": [
+      "Potential prescribing omission"
+    ]
+  },
+  {
+    "patient_id": "DEV006",
+    "scenario": "unclear_indication",
+    "unclear_indication": [
+      "Amitriptyline"
+    ]
+  },
+  {
+    "patient_id": "DEV007",
+    "scenario": "renal_impairment",
+    "risk": [
+      "Renal medication safety risk"
+    ]
+  },
+  {
+    "patient_id": "DEV008",
+    "scenario": "frailty_falls",
+    "risk": [
+      "Falls risk",
+      "Sedation risk"
+    ]
+  },
+  {
+    "patient_id": "DEV009",
+    "scenario": "deprescribing",
+    "deprescribing": [
+      "Diazepam review"
+    ]
+  },
+  {
+    "patient_id": "DEV010",
+    "scenario": "complex",
+    "interaction": [
+      "Apixaban + Aspirin",
+      "Sertraline + Tramadol"
+    ],
+    "risk": [
+      "Bleeding risk",
+      "Falls risk",
+      "Renal medication safety risk"
+    ]
+  }
+]

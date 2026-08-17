@@ -1,0 +1,702 @@
+[
+  {
+    "patient_id": "CVD_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL004",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "ValidationError",
+    "error": "1 validation error for ValidationResult\nsummary\n  Field required [type=missing, input_value={'stage': 'summary', 'sta...on': True, 'issues': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "patient_id": "CVD_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL015",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owaMbB4-fdNmn-a2c9b749fe70d697)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29590 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owaMbB4-fdNmn-a2c9b749fe70d697\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29590 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "DCKD_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL002",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owaRdG8-4YNCb4-a2c9ca83ef34c97b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29330 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owaRdG8-4YNCb4-a2c9ca83ef34c97b\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29330 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "DDI_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL006",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "ValidationError",
+    "error": "1 validation error for ValidationResult\nsummary\n  Field required [type=missing, input_value={'stage': 'summary', 'sta...on': True, 'issues': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "patient_id": "DDI_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL010",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "ValidationError",
+    "error": "1 validation error for ValidationResult\nsummary\n  Field required [type=missing, input_value={'stage': 'summary', 'sta...on': True, 'issues': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "patient_id": "DDI_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL001",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "ValidationError",
+    "error": "1 validation error for ValidationResult\nsummary\n  Field required [type=missing, input_value={'stage': 'summary', 'sta...on': True, 'issues': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "patient_id": "FRAIL_EVAL002",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owaVFxT-4YNCb4-a2c9dbd1bb293011)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 31019 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owaVFxT-4YNCb4-a2c9dbd1bb293011\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 31019 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "FRAIL_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL007",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owaWT2n-fdNmn-a2c9e17ddbcb706f)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 32018 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owaWT2n-fdNmn-a2c9e17ddbcb706f\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 32018 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "FRAIL_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL004",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owabnNi-4YNCb4-a2c9fae5889f28a6)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 32402 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owabnNi-4YNCb4-a2c9fae5889f28a6\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 32402 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MULTI_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL006",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owacG95-fdNmn-a2c9fd2d7959731a)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29181 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owacG95-fdNmn-a2c9fd2d7959731a\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29181 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MULTI_EVAL007",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owacXsd-4YNCb4-a2c9fe78587c05e8)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 28946 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owacXsd-4YNCb4-a2c9fe78587c05e8\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 28946 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MULTI_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL013",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "ValidationError",
+    "error": "1 validation error for ValidationResult\nsummary\n  Field required [type=missing, input_value={'stage': 'summary', 'sta...on': True, 'issues': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "patient_id": "MULTI_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL016",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL017",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL018",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "ValidationError",
+    "error": "1 validation error for RisksList\n  Invalid JSON: EOF while parsing a list at line 218 column 5 [type=json_invalid, input_value='{\\n  \"risks\": [\\n    {\\n...source\": \"STOPP\"\\n    }', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "patient_id": "MULTI_EVAL019",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL020",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  }
+]

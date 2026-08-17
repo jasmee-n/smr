@@ -1,0 +1,178 @@
+# risk agent: identification of medication-related risks
+import json
+
+from langsmith import traceable
+from schemas import SMRState, RisksList
+
+from utils import convert_smr_state_to_json
+
+
+class RiskAgent:
+    def __init__(self, model, clinical_knowledge):
+        self.model = model
+        self.clinical_knowledge = clinical_knowledge
+
+    @traceable(name = 'Risk Agent', run_type = 'chain')
+    def run(self, state: SMRState):
+
+        stopp_evidence = self.clinical_knowledge.retrieve_stopp(state)
+
+        bnf_tables = self.clinical_knowledge.retrieve_bnf_tables(
+            state.medications.medications
+        )
+
+        state.clinical_evidence.stopp = stopp_evidence
+        state.clinical_evidence.bnf_tables = bnf_tables
+
+        prompt = f'''
+        You are the Risk Assessment Agent in a Structured Medication Review (SMR) pipeline.
+
+        ROLE:
+        * Identify clinically relevant medication-related risks.
+        * Assess patient-specific safety concerns associated with the current medication regimen.
+
+        OBJECTIVE:
+        * Review the SMRState and identify medication-related risks.
+        * Review the permitted STOPP criteria and BNF table evidence.
+        * Assess risks arising from:
+            * patient characteristics
+            * medications
+            * documented drug-drug interactions
+            * laboratory results
+            * frailty
+            * allergies
+            * documented clinical information
+        * Assess the potential clinical significance of identified risks.
+        * Assign an appropriate severity level.
+        * Provide supporting rationale and source attribution.
+
+        INPUTS:
+        * The current SMRState object.
+        * Relevant STOPP criteria.
+        * Relevant BNF table evidence.
+
+        Consider the following when identifying risks:
+
+        Patient Factors:
+        * Advanced age
+        * Frailty
+        * History of falls
+        * Laboratory results
+        * Smoking status
+        * Alcohol use
+        * Allergies
+
+        Medication Factors:
+        * High-risk medicines
+        * Anticoagulants
+        * Antiplatelets
+        * Opioids
+        * Benzodiazepines
+        * Antidepressants
+        * Antipsychotics
+        * Anticholinergic medicines
+        * Medicines requiring dose adjustment
+
+        Interaction-Related Factors:
+        * Increased bleeding risk
+        * Increased falls risk
+        * Increased hypotension risk
+        * Increased renal impairment risk
+        * Electrolyte disturbance risk
+        * Central nervous system depression
+        * Serotonin toxicity risk
+        * Anticholinergic burden
+        * QT prolongation risk
+
+        REASONING GUIDELINES:
+        * Use only information contained within the SMRState and permitted evidence.
+        * Use documented interactions already present in the SMRState when assessing risk.
+        * Use documented patient characteristics when assessing risk.
+        * Use documented medications when assessing risk.
+        * Use STOPP criteria only when the patient and medication information satisfy the criterion.
+        * Use BNF table evidence only when it is relevant to the patient's medications or clinical characteristics.
+        * Do not assume that retrieved evidence applies solely because it was retrieved.
+        * Do not invent diagnoses.
+        * Do not invent laboratory values.
+        * Do not invent allergies.
+        * Do not invent interactions.
+        * Do not report a risk unless it is supported by the patient data, an existing interaction or the permitted evidence.
+        * If important information required to assess a risk is missing, do not confirm the risk as present.
+        * Where appropriate, state in the rationale that the risk cannot be fully assessed because information is missing.
+        * Only report clinically relevant risks.
+        * Do not duplicate the same risk under different wording.
+        * Do not report a drug-drug interaction as a new interaction; describe only the patient-level risk arising from an interaction already identified.
+
+        CLINICAL SAFETY GUIDELINES:
+        * Prioritise patient safety.
+        * Preserve uncertainty when evidence is limited.
+        * Do not exaggerate risk severity.
+        * Severity must reflect the supplied evidence and patient-specific factors.
+        * Do not assign high or critical severity solely because a medicine belongs to a high-risk class.
+        * Do not generate recommendations.
+        * Do not generate monitoring plans.
+        * Do not generate deprescribing actions.
+        * Do not generate new interactions.
+        * Do not generate new indications.
+
+        For each risk identified provide:
+        * risk_type
+        * severity
+        * rationale
+        * source
+
+        SOURCE ATTRIBUTION RULES:
+        * If based only on patient demographics, medications, allergies, labs, frailty, falls history or documented interactions, source = 'PATIENT DATA'.
+        * If supported by the supplied STOPP criteria, source = 'STOPP'.
+        * If supported by the supplied BNF table evidence, source = 'BNF'.
+        * If supported by more than one supplied source, list the relevant sources separated by a semicolon.
+        * If the source is uncertain, source = 'UNCLEAR'.
+
+        OUTPUT REQUIREMENTS:
+        * Return valid JSON only.
+        * Follow the supplied schema exactly.
+        * Do not return markdown.
+        * Do not return explanations outside the JSON.
+        * Do not return reasoning outside the JSON.
+        * If no clinically relevant risks are identified, return an empty risks list.
+
+        PERMITTED STOPP EVIDENCE:
+        {convert_smr_state_to_json(
+            state.clinical_evidence.stopp
+        )}
+
+        PERMITTED BNF TABLE EVIDENCE:
+        {convert_smr_state_to_json(
+            state.clinical_evidence.bnf_tables
+        )}
+
+        SMR STATE:
+        {convert_smr_state_to_json(state)}
+
+        JSON SCHEMA:
+        {RisksList.model_json_schema()}
+        '''
+
+        response = self.model.invoke(prompt)
+
+        raw = (
+            response.content
+            .replace('```json', '')
+            .replace('```', '')
+            .strip()
+        )
+
+        start = raw.find('{')
+        end = raw.rfind('}') + 1
+
+        if start == -1 or end == 0:
+            raise ValueError(
+                'RISK AGENT DID NOT RETURN A VALID JSON OBJECT.'
+            )
+
+        raw = raw[start:end]
+
+        result = RisksList.model_validate_json(raw)
+        state.risks = result
+
+        return state
