@@ -1,0 +1,73 @@
+{
+  "execution_reliability": {
+    "attempt_1": {
+      "total": 100,
+      "completed": 87,
+      "failed": 13,
+      "success_rate": 0.87
+    },
+    "attempt_2": {
+      "total": 100,
+      "completed": 91,
+      "failed": 9,
+      "success_rate": 0.91
+    }
+  },
+  "clinical_evaluation_attempt_2": {
+    "completed_patients": 91,
+    "failed_patients": 9,
+    "metrics": {
+      "indications": {
+        "tp": 706,
+        "fp": 121,
+        "fn": 76,
+        "precision": 0.854,
+        "recall": 0.903,
+        "f1": 0.878
+      },
+      "interactions": {
+        "tp": 166,
+        "fp": 408,
+        "fn": 560,
+        "precision": 0.289,
+        "recall": 0.229,
+        "f1": 0.255
+      }
+    },
+    "target_detection": {
+      "risks": {
+        "detected": 130,
+        "expected": 302,
+        "recall": 0.43
+      },
+      "deprescribing": {
+        "detected": 4,
+        "expected": 22,
+        "recall": 0.182
+      },
+      "monitoring": {
+        "detected": 21,
+        "expected": 114,
+        "recall": 0.184
+      },
+      "recommendations": {
+        "detected": 1,
+        "expected": 136,
+        "recall": 0.007
+      }
+    },
+    "micro_metrics": {
+      "tp": 872,
+      "fp": 529,
+      "fn": 636,
+      "precision": 0.622,
+      "recall": 0.578,
+      "f1": 0.6
+    },
+    "macro_metrics": {
+      "precision": 0.572,
+      "recall": 0.566,
+      "f1": 0.567
+    }
+  }
+}

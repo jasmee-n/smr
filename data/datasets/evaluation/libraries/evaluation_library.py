@@ -1,4 +1,4 @@
-EVALUATION_LIBRARY = {
+EVALUATION_CASE_LIBRARY = {
     'anticholinergic_risk': [
         ['Amitriptyline 25 mg at night', 'Oxybutynin 5 mg twice daily'],
         ['Amitriptyline 25 mg at night', 'Solifenacin 5 mg once daily'],

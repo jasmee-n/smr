@@ -6,7 +6,7 @@ from schemas import *
 from utils import *
 from validation import *
 
-# clinical knowledge base
+# clinical knowledge
 clinical_knowledge = ClinicalKnowledge()
 
 # langsmith
@@ -15,7 +15,7 @@ os.environ['LANGSMITH_API_KEY'] = LANGSMITH_API_KEY
 os.environ['LANGSMITH_PROJECT'] = 'smr_evaluation'
 os.environ['LANGSMITH_ENDPOINT'] = LANGSMITH_ENDPOINT
 
-# model initialisation
+# model
 repo_id = 'Qwen/Qwen2.5-7B-Instruct'
 
 llm = HuggingFaceEndpoint(
@@ -26,88 +26,91 @@ llm = HuggingFaceEndpoint(
     provider = 'auto'
 )
 
+validator_llm = HuggingFaceEndpoint(
+    repo_id=repo_id,
+    max_new_tokens=750,
+    temperature=0,
+    huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN,
+    provider='auto'
+)
+
+validator_model = ChatHuggingFace(llm = validator_llm)
+
 model = ChatHuggingFace(llm = llm)
 
-# agent initialisation
+# agents
 input_agent = InputAgent(model = model)
+
 indication_agent = IndicationAgent(model = model, clinical_knowledge = clinical_knowledge)
+
 ddi_interaction_agent = DDIInteractionAgent(model = model, clinical_knowledge = clinical_knowledge)
+
 risk_agent = RiskAgent(model = model, clinical_knowledge = clinical_knowledge)
+
 deprescribing_agent = DeprescribingAgent(model = model, clinical_knowledge = clinical_knowledge)
+
 monitoring_agent = MonitoringAgent(model = model, clinical_knowledge = clinical_knowledge)
+
 recommendation_agent = RecommendationAgent(model = model, clinical_knowledge = clinical_knowledge)
+
 summary_agent = SummaryAgent(model = model)
-safety_validator_agent = SafetyValidatorAgent(model = model)
+
+safety_validator_agent = SafetyValidatorAgent(model = validator_model)
 
 @traceable(name = 'SMR Pipeline', run_type = 'chain')
 def run_smr(patient_input):
-
-    # input agent
     state = input_agent.run(patient_input)
     state = validate_medications(safety_validator_agent, state, patient_input)
 
-    # indication agent
     state = indication_agent.run(state)
     state = validate_indications(safety_validator_agent, state)
 
-    # drug-drug interaction agent
     state = ddi_interaction_agent.run(state)
     state = validate_interactions(safety_validator_agent, state)
 
-    # risk agent
     state = risk_agent.run(state)
     state = validate_risks(safety_validator_agent, state)
 
-    # deprescribing agent
     state = deprescribing_agent.run(state)
     state = validate_deprescribing(safety_validator_agent, state)
 
-    # monitoring agent
     state = monitoring_agent.run(state)
     state = validate_monitoring(safety_validator_agent, state)
 
-    # recommendation agent
     state = recommendation_agent.run(state)
     state = validate_recommendations(safety_validator_agent, state)
 
-    # summary agent
-    summary = summary_agent.run(state)
-    state = validate_summary(safety_validator_agent, state, summary)
+    state.ranked_findings = rank_findings(state)
 
-    # clinician report
-    clinician_report = generate_clinician_report(
-        state,
-        summary.overview,
-        summary.conclusion
-    )
+    state = summary_agent.run(state)
+    state = validate_summary(safety_validator_agent, state, state)
 
-    return state, clinician_report
+    report = generate_clinician_report(state, state.overview, state.conclusion)
 
-# output directory
+    return state, report
+
+# paths
 PROJECT_ROOT = Path('/data/home/bt25094/dissertation/smr pipeline')
 
-REPORT_OUTPUT_DIRECTORY = PROJECT_ROOT / 'reports' / 'eval_reports'
+REPORT_OUTPUT_DIRECTORY = PROJECT_ROOT / 'reports' / 'evaluation_reports'/ 'attempt_2'
 REPORT_OUTPUT_DIRECTORY.mkdir(parents = True, exist_ok = True)
 
-# evaluation dataset
 EVALUATION_PATH = PROJECT_ROOT / 'data' / 'datasets' / 'evaluation'
 
 PATIENTS_PATH = EVALUATION_PATH / 'evaluation_patients.json'
-RESULTS_PATH = EVALUATION_PATH / 'evaluation_results.json'
-EXECUTION_LOG_PATH = EVALUATION_PATH / 'execution_log.json'
+RESULTS_PATH = PROJECT_ROOT / 'results'/ 'attempt_2'/ 'evaluation_results_attempt_2.json'
 
-# load patients
+EXECUTION_LOG_PATH = PROJECT_ROOT / 'results'/ 'attempt_2'/ 'execution_log_attempt_2.json'
+EXECUTION_LOG_PATH.parent.mkdir(parents = True, exist_ok = True)
+
 with PATIENTS_PATH.open('r', encoding = 'utf-8') as file:
     patients = json.load(file)
 
-# results
 results = []
 execution_log = []
 
-# evaluation run
 for patient in patients:
     patient_id = patient['patient_id']
-
     print(f'STARTING: {patient_id}', flush = True)
 
     try:
@@ -127,8 +130,8 @@ for patient in patients:
             'error': None
         })
 
-        REPORT_PATH = REPORT_OUTPUT_DIRECTORY / f'{patient_id}.pdf'
-        save_report_as_pdf(report, REPORT_PATH)
+        report_path = REPORT_OUTPUT_DIRECTORY / f'{patient_id}.pdf'
+        save_report_as_pdf(report, report_path)
 
         print(f'COMPLETED: {patient_id}', flush = True)
 
@@ -141,7 +144,7 @@ for patient in patients:
 
         execution_log.append({
             'patient_id': patient_id,
-            'attempt': 1,
+            'attempt': 3,
             'status': 'failed',
             'error_type': type(error).__name__,
             'error': str(error)
@@ -151,36 +154,16 @@ for patient in patients:
             f'FAILED: {patient_id} - {type(error).__name__}: {error}',
             flush = True
         )
-    
+
     with RESULTS_PATH.open('w', encoding = 'utf-8') as file:
-        json.dump(
-            results,
-            file,
-            indent = 2,
-            ensure_ascii = False,
-            default = str
-        )
-    
+        json.dump(results, file, indent = 2, ensure_ascii = False, default = str)
+
     with EXECUTION_LOG_PATH.open('w', encoding = 'utf-8') as file:
-        json.dump(
-            execution_log,
-            file,
-            indent = 2,
-            ensure_ascii = False,
-            default = str
-        )
+        json.dump(execution_log, file, indent = 2, ensure_ascii = False, default = str)
 
-completed = sum(
-    1 for item in execution_log
-    if item['status'] == 'completed'
-)
-
-failed = sum(
-    1 for item in execution_log
-    if item['status'] == 'failed'
-)
+completed = sum(item['status'] == 'completed' for item in execution_log)
+failed = sum(item['status'] == 'failed' for item in execution_log)
 
 print(f'EVALUATION COMPLETE: {len(results)} patients')
-print(f'FIRST-PASS COMPLETED: {completed}')
-print(f'FIRST-PASS FAILED: {failed}')
-print(f'FIRST-PASS COMPLETION RATE: {completed / len(patients):.1%}')
+print(f'COMPLETED: {completed}')
+print(f'FAILED: {failed}')

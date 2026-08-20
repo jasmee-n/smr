@@ -1,4 +1,4 @@
 from .allergies_library import ALLERGIES
 from .conditions_library import CONDITIONS
-from .evaluation_library import EVALUATION_LIBRARY
+from .evaluation_library import EVALUATION_CASE_LIBRARY
 from .medication_library import CONDITION_MEDICATIONS

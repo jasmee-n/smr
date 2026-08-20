@@ -2,19 +2,29 @@ import json
 from pathlib import Path
 
 # paths
-BASE_PATH = Path('/data/home/bt25094/dissertation/smr pipeline/data/clinical_database')
+BASE_PATH = Path(
+    '/data/home/bt25094/dissertation/smr pipeline/data/clinical_database'
+)
 
-BNF_PATH = BASE_PATH / 'bnf_evidence' / 'bnf_evidence.json'
+BNF_PATH = (
+    BASE_PATH
+    / 'bnf_evidence'
+    / 'bnf_evidence.json'
+)
 
-STOPP_START_PATH = BASE_PATH/ 'stopp_start_evidence'/ 'stopp_start_evidence.json'
+STOPP_START_PATH = (
+    BASE_PATH
+    / 'stopp_start_evidence'
+    / 'stopp_start_evidence.json'
+)
 
 # clinical knowledge
 class ClinicalKnowledge:
     def __init__(self):
-        with BNF_PATH.open('r', encoding = 'utf-8') as file:
+        with BNF_PATH.open('r', encoding='utf-8') as file:
             bnf = json.load(file)
 
-        with STOPP_START_PATH.open('r', encoding = 'utf-8') as file:
+        with STOPP_START_PATH.open('r', encoding='utf-8') as file:
             stopp_start = json.load(file)
 
         self.bnf_tables = bnf['tables']
@@ -35,66 +45,79 @@ class ClinicalKnowledge:
     # BNF interaction retrieval
     def retrieve_bnf_interactions(self, medications):
         medication_names = [
-            medication.name.lower()
+            medication.name.lower().strip()
             for medication in medications
         ]
 
         retrieved = []
 
         for interaction in self.bnf_interactions:
-
             drug_a = (
-                interaction.get('drug_a')
+                interaction.get('drug_or_class_a')
                 or ''
             ).lower()
 
             drug_b = (
-                interaction.get('drug_b')
+                interaction.get('drug_or_class_b')
                 or ''
             ).lower()
 
             interaction_text = (
-                interaction.get('interaction_text')
+                interaction.get('interaction')
                 or ''
             ).lower()
 
-            matches = [
+            full_text = f'{drug_a} {drug_b} {interaction_text}'
+
+            matched_medications = [
                 medication
                 for medication in medication_names
-                if (
-                    medication in drug_a
-                    or medication in drug_b
-                    or medication in interaction_text
-                )
+                if medication in full_text
             ]
 
-            if len(set(matches)) >= 2:
-                retrieved.append(interaction)
+            if len(set(matched_medications)) >= 2:
+                retrieved.append({
+                    **interaction,
+                    'matched_medications': list(
+                        set(matched_medications)
+                    )
+                })
 
         return retrieved
 
     # BNF table retrieval
     def retrieve_bnf_tables(self, medications):
         medication_names = [
-            medication.name.lower()
+            medication.name.lower().strip()
             for medication in medications
         ]
 
         retrieved = []
 
         for table in self.bnf_tables:
-
             drugs = [
-                drug.lower()
+                drug.lower().strip()
                 for drug in table.get('drugs', [])
             ]
 
-            if any(
-                medication in drug
+            matched_medications = [
+                medication
                 for medication in medication_names
-                for drug in drugs
-            ):
-                retrieved.append(table)
+                if any(
+                    medication == drug
+                    or medication in drug
+                    or drug in medication
+                    for drug in drugs
+                )
+            ]
+
+            if matched_medications:
+                retrieved.append({
+                    **table,
+                    'matched_medications': list(
+                        set(matched_medications)
+                    )
+                })
 
         return retrieved
 
@@ -103,7 +126,6 @@ class ClinicalKnowledge:
         retrieved = []
 
         for criterion in self.stopp:
-
             criterion_text = (
                 criterion.get('criterion')
                 or ''
@@ -111,7 +133,8 @@ class ClinicalKnowledge:
 
             if any(
                 medication.name.lower() in criterion_text
-                for medication in state.medications.medications
+                for medication
+                in state.medications.medications
             ):
                 retrieved.append(criterion)
 
@@ -122,7 +145,6 @@ class ClinicalKnowledge:
         retrieved = []
 
         for criterion in self.start:
-
             criterion_text = (
                 criterion.get('criterion')
                 or ''

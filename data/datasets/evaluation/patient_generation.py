@@ -145,7 +145,7 @@ def add_evaluation_case(medications, scenario):
     if evaluation_type is None:
         return medications, None
 
-    evaluation_case = random.choice(EVALUATION_LIBRARY[evaluation_type])
+    evaluation_case = random.choice(EVALUATION_CASE_LIBRARY[evaluation_type])
 
     medications.extend(evaluation_case)
     medications = list(dict.fromkeys(medications))

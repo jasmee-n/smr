@@ -1,1 +1,2 @@
 from .clinical_knowledge import ClinicalKnowledge
+from .clinical_priority import rank_findings

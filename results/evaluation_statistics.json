@@ -1,0 +1,111 @@
+{
+  "execution_reliability": {
+    "attempt_1": {
+      "completed": 87,
+      "failed": 13,
+      "total": 100,
+      "success_rate": 0.87,
+      "success_95_ci": [
+        0.79,
+        0.922
+      ]
+    },
+    "attempt_2": {
+      "completed": 91,
+      "failed": 9,
+      "total": 100,
+      "success_rate": 0.91,
+      "success_95_ci": [
+        0.838,
+        0.952
+      ]
+    }
+  },
+  "clinical_performance": {
+    "indications": {
+      "precision": 0.854,
+      "precision_95_ci": [
+        0.828,
+        0.876
+      ],
+      "recall": 0.903,
+      "recall_95_ci": [
+        0.88,
+        0.922
+      ],
+      "f1": 0.878
+    },
+    "interactions": {
+      "precision": 0.289,
+      "precision_95_ci": [
+        0.254,
+        0.328
+      ],
+      "recall": 0.229,
+      "recall_95_ci": [
+        0.2,
+        0.261
+      ],
+      "f1": 0.255
+    }
+  },
+  "target_detection": {
+    "risks": {
+      "detected": 130,
+      "expected": 302,
+      "detection_rate": 0.43,
+      "detection_95_ci": [
+        0.376,
+        0.487
+      ]
+    },
+    "deprescribing": {
+      "detected": 4,
+      "expected": 22,
+      "detection_rate": 0.182,
+      "detection_95_ci": [
+        0.073,
+        0.385
+      ]
+    },
+    "monitoring": {
+      "detected": 21,
+      "expected": 114,
+      "detection_rate": 0.184,
+      "detection_95_ci": [
+        0.124,
+        0.265
+      ]
+    },
+    "recommendations": {
+      "detected": 1,
+      "expected": 136,
+      "detection_rate": 0.007,
+      "detection_95_ci": [
+        0.001,
+        0.04
+      ]
+    }
+  },
+  "micro_metrics": {
+    "tp": 872,
+    "fp": 529,
+    "fn": 636,
+    "precision": 0.622,
+    "recall": 0.578,
+    "f1": 0.6
+  },
+  "macro_metrics": {
+    "precision": 0.572,
+    "recall": 0.566,
+    "f1": 0.567
+  },
+  "final_report_quality": {
+    "completeness": 0.912,
+    "completeness_95_ci": [
+      0.888,
+      0.931
+    ],
+    "validator_pass_rate": 1.0
+  }
+}

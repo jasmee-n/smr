@@ -1,0 +1,702 @@
+[
+  {
+    "patient_id": "CVD_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL015",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: oweNeMA-fdNmn-a2ce0d707b5a92aa)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 32473 `inputs` tokens and 750 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"oweNeMA-fdNmn-a2ce0d707b5a92aa\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 32473 `inputs` tokens and 750 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "DCKD_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL004",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owePsYP-4YNCb4-a2ce1349aa6ae5e5)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 33461 `inputs` tokens and 750 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owePsYP-4YNCb4-a2ce1349aa6ae5e5\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 33461 `inputs` tokens and 750 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "DCKD_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL007",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "JSONDecodeError",
+    "error": "Expecting ',' delimiter: line 40 column 6 (char 3201)"
+  },
+  {
+    "patient_id": "DCKD_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL006",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "ValidationError",
+    "error": "1 validation error for RisksList\n  Invalid JSON: EOF while parsing a list at line 326 column 5 [type=json_invalid, input_value='{\\n  \"risks\": [\\n    {\\n... \"source\": \"BNF\"\\n    }', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "patient_id": "DDI_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL002",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: oweXt64-4YNCb4-a2ce3970aa811039)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 35080 `inputs` tokens and 750 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"oweXt64-4YNCb4-a2ce3970aa811039\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 35080 `inputs` tokens and 750 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "FRAIL_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL005",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Server error '503 Service Unavailable' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: oweYgzV-fdNmn-a2ce3d4abfd5f933)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503\n\n{'message': 'Service unavailable', 'type': 'service_unavailable', 'param': None, 'code': None}"
+  },
+  {
+    "patient_id": "FRAIL_EVAL006",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Server error '503 Service Unavailable' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: oweYi7Q-4YNCb4-a2ce3d627c87fe3b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503\n\n{'message': 'Service unavailable', 'type': 'service_unavailable', 'param': None, 'code': None}"
+  },
+  {
+    "patient_id": "FRAIL_EVAL007",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: oweZ3gp-fdNmn-a2ce3efdca363c85)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 33921 `inputs` tokens and 750 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"oweZ3gp-fdNmn-a2ce3efdca363c85\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 33921 `inputs` tokens and 750 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "FRAIL_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL004",
+    "attempt": 3,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: oweeuhM-fdNmn-a2ce5ae8f91ac792)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 33511 `inputs` tokens and 750 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"oweeuhM-fdNmn-a2ce5ae8f91ac792\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 33511 `inputs` tokens and 750 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MULTI_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL016",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL017",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL018",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL019",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL020",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  }
+]

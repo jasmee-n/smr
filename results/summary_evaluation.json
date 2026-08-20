@@ -1,0 +1,1609 @@
+{
+  "completed_patients": 91,
+  "high_priority_findings": 668,
+  "high_priority_findings_represented": 609,
+  "overall_completeness": 0.912,
+  "completeness_95_ci": [
+    0.888,
+    0.931
+  ],
+  "validator_pass_rate": 1.0,
+  "patients": [
+    {
+      "patient_id": "CVD_EVAL001",
+      "high_priority_findings": 3,
+      "high_priority_represented": 3,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Digoxin: Potential for increased toxicity and no clear evidence of benefit",
+        "Digoxin: Serum digoxin levels",
+        "Consider dose reduction or discontinuation of Digoxin, with close monitoring of serum digoxin levels."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL002",
+      "high_priority_findings": 3,
+      "high_priority_represented": 3,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider adding an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Consider adding a cardio-selective beta-blocker for stable heart failure with reduced ejection fraction.",
+        "Consider adding a SGLT-2 inhibitor for symptomatic heart failure with or without reduced ejection fraction."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL003",
+      "high_priority_findings": 6,
+      "high_priority_represented": 6,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Apixaban: Increased bleeding risk",
+        "Zopiclone: Increased falls risk",
+        "Apixaban: Bleeding",
+        "Zopiclone: Falls",
+        "Consider prescribing a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider prescribing a vitamin K antagonist or direct thrombin inhibitor or factor Xa inhibitor for chronic or paroxysmal atrial fibrillation."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL004",
+      "high_priority_findings": 13,
+      "high_priority_represented": 12,
+      "completeness": 0.923,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Spironolactone: Risk of dangerous hyperkalaemia",
+        "Duloxetine: Risk of serotonin syndrome",
+        "Duloxetine: Serum potassium levels",
+        "Duloxetine: Serum potassium levels",
+        "Duloxetine: Serum potassium levels",
+        "Duloxetine: Serotonin syndrome",
+        "Indapamide: Serum potassium levels",
+        "Indapamide: Serum potassium levels",
+        "Consider initiating statin therapy for the prevention of cardiovascular events.",
+        "Consider initiating a beta-blocker for the management of chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider dose reduction or discontinuation of spironolactone to reduce the risk of hyperkalaemia.",
+        "Consider dose reduction or discontinuation of duloxetine to reduce the risk of serotonin syndrome."
+      ],
+      "missed_findings": [
+        "Apixaban: Blood tests"
+      ]
+    },
+    {
+      "patient_id": "CVD_EVAL005",
+      "high_priority_findings": 19,
+      "high_priority_represented": 19,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Ramipril 5 mg once daily: Renal function monitoring",
+        "Ramipril 2.5 mg once daily: Renal function monitoring",
+        "Furosemide 40 mg once daily: Renal function monitoring",
+        "Spironolactone 25 mg once daily: Renal function monitoring",
+        "Lithium carbonate MR 400 mg at night: Renal function monitoring",
+        "Furosemide 40 mg once daily: Potassium monitoring",
+        "Spironolactone 25 mg once daily: Potassium monitoring",
+        "Lithium carbonate MR 400 mg at night: Potassium monitoring",
+        "Ramipril 5 mg once daily: Blood pressure monitoring",
+        "Ramipril 2.5 mg once daily: Blood pressure monitoring",
+        "Furosemide 40 mg once daily: Blood pressure monitoring",
+        "Lithium carbonate MR 400 mg at night: Blood pressure monitoring",
+        "Lithium carbonate MR 400 mg at night: Serum lithium monitoring",
+        "Initiate statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Initiate an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Initiate a cardio-selective beta-blocker (bisoprolol, nebivolol, metoprolol or carvedilol) for stable heart failure with reduced ejection fraction.",
+        "Initiate a mineralocorticoid receptor antagonist (spironolactone, eplerenone) in heart failure without severe renal function impairment (eGFR > 30 ml/min/m2).",
+        "Initiate SGLT-2 inhibitors (canagliflozin, dapagliflozin, empagliflozin, ertugliflozin) in symptomatic heart failure with or without reduced ejection fraction regardless of diabetes being present or not.",
+        "Initiate sacubitril/valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker (Sacubitril/valsartan to replace ACE inhibitor or Angiotensin Receptor Blocker)."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL006",
+      "high_priority_findings": 5,
+      "high_priority_represented": 5,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Olanzapine: High risk of urinary retention",
+        "Ticagrelor: Increased bleeding risk",
+        "Olanzapine: Symptom monitoring",
+        "Consider initiating Sacubitril/Valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker.",
+        "Consider initiating Intravenous iron for symptomatic heart failure with reduced ejection fraction and iron deficiency."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL007",
+      "high_priority_findings": 7,
+      "high_priority_represented": 7,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Apixaban 5 mg twice daily: INR monitoring",
+        "Initiate bisoprolol for hypertension and ischaemic heart disease.",
+        "Initiate a statin for the patient with a documented history of ischaemic heart disease.",
+        "Initiate an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Initiate a cardio-selective beta-blocker for stable heart failure with reduced ejection fraction.",
+        "Initiate spironolactone for heart failure without severe renal function impairment.",
+        "Initiate apixaban for atrial fibrillation to prevent stroke."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL008",
+      "high_priority_findings": 10,
+      "high_priority_represented": 10,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Dabigatran: Blood tests",
+        "Ramipril and Sotalol: Renal function monitoring",
+        "Duloxetine and Ibuprofen gel: Renal function monitoring",
+        "Duloxetine and Promethazine: Serotonin syndrome monitoring",
+        "Mirabegron and Ramipril: Blood pressure monitoring",
+        "Duloxetine and Ibuprofen gel: Serotonin syndrome monitoring",
+        "Promethazine and Duloxetine: Serotonin syndrome monitoring",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Monitor renal function at each follow-up visit for the patient taking ramipril and sotalol.",
+        "Monitor blood tests at each follow-up visit for the patient taking dabigatran, as mirabegron is predicted to increase the exposure to dabigatran, and ticagrelor increases the exposure to dabigatran."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL009",
+      "high_priority_findings": 6,
+      "high_priority_represented": 6,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Apixaban: Blood tests",
+        "Indapamide: Blood tests",
+        "Furosemide: Blood tests",
+        "Torasemide: Blood tests",
+        "Consider prescribing an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Consider prescribing a cardio-selective beta-blocker for stable heart failure with reduced ejection fraction."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL010",
+      "high_priority_findings": 15,
+      "high_priority_represented": 9,
+      "completeness": 0.6,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Initiate statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Initiate ACE inhibitor therapy for heart failure with reduced ejection fraction.",
+        "Initiate cardio-selective beta-blocker therapy for stable heart failure with reduced ejection fraction.",
+        "Initiate mineralocorticoid receptor antagonist therapy in heart failure without severe renal function impairment (eGFR > 30 ml/min/m2).",
+        "Initiate SGLT-2 inhibitors in symptomatic heart failure with or without reduced ejection fraction regardless of diabetes being present or not.",
+        "Initiate sacubitril/valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker.",
+        "Initiate L-DOPA or a dopamine agonist in idiopathic Parkinson’s disease with functional impairment and resultant disability.",
+        "Initiate rivastigmine for Dementia with Lewy Bodies or Parkinson’s disease dementia.",
+        "Initiate selective serotonin reuptake inhibitor (or SNRI or pregabalin if SSRI contraindicated) for persistent severe anxiety that affects independent functioning and quality of life."
+      ],
+      "missed_findings": [
+        "Spironolactone: Risk of hyperkalaemia",
+        "Spironolactone: Serum potassium",
+        "Spironolactone: Hypotension",
+        "Amitriptyline: Hypotension",
+        "Spironolactone: Hyponatraemia",
+        "Amitriptyline: Hyponatraemia"
+      ]
+    },
+    {
+      "patient_id": "CVD_EVAL011",
+      "high_priority_findings": 5,
+      "high_priority_represented": 5,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Carbamazepine: Renal function monitoring",
+        "Lisinopril: Renal function monitoring",
+        "Initiate lisinopril for hypertension management.",
+        "Initiate atorvastatin for secondary prevention of cardiovascular events.",
+        "Monitor renal function for carbamazepine and lisinopril."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "CVD_EVAL012",
+      "high_priority_findings": 7,
+      "high_priority_represented": 6,
+      "completeness": 0.857,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Spironolactone: Risk of dangerous hyperkalaemia with concurrent use of potassium-conserving drugs",
+        "Flecainide: Increased risk of QT prolongation with concurrent use of spironolactone",
+        "Spironolactone: Serum potassium",
+        "Amitriptyline: QT interval",
+        "Consider initiating sacubitril/valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker.",
+        "Consider initiating a SGLT-2 inhibitor (canagliflozin, dapagliflozin, empagliflozin, ertugliflozin) in symptomatic heart failure with or without reduced ejection fraction regardless of diabetes being present or not."
+      ],
+      "missed_findings": [
+        "Flecainide: QT interval"
+      ]
+    },
+    {
+      "patient_id": "CVD_EVAL013",
+      "high_priority_findings": 7,
+      "high_priority_represented": 5,
+      "completeness": 0.714,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Initiate statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Initiate an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Initiate a cardio-selective beta-blocker for stable heart failure with reduced ejection fraction.",
+        "Initiate a mineralocorticoid receptor antagonist in heart failure without severe renal function impairment.",
+        "Initiate SGLT-2 inhibitors in symptomatic heart failure with or without reduced ejection fraction."
+      ],
+      "missed_findings": [
+        "Zolpidem: Increased risk of falls",
+        "Zolpidem: Falls risk"
+      ]
+    },
+    {
+      "patient_id": "CVD_EVAL014",
+      "high_priority_findings": 8,
+      "high_priority_represented": 8,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Spironolactone: Risk of hyperkalaemia",
+        "Dabigatran: Serum potassium levels",
+        "Ramipril: Serum potassium levels",
+        "Spironolactone: Serum potassium levels",
+        "Consider initiating sacubitril/valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker.",
+        "Consider initiating a SGLT-2 inhibitor in symptomatic heart failure with or without reduced ejection fraction regardless of diabetes being present or not.",
+        "Consider initiating a cardio-selective beta-blocker (e.g., bisoprolol, nebivolol, metoprolol, or carvedilol) for stable heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist (e.g., spironolactone, eplerenone) in heart failure without severe renal function impairment (eGFR > 30 ml/min/m2)."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL001",
+      "high_priority_findings": 3,
+      "high_priority_represented": 3,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Mirabegron: Exacerbation of hypertension",
+        "Initiate statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Initiate antihypertensive therapy where systolic blood pressure > 140 mmHg and/or diastolic blood pressure > 90 mmHg."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL002",
+      "high_priority_findings": 1,
+      "high_priority_represented": 1,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Aspirin: Long-term use without clear indication"
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL003",
+      "high_priority_findings": 4,
+      "high_priority_represented": 4,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Metformin: Risk of hyperkalaemia",
+        "Metformin: Serum potassium monitoring",
+        "Initiate statin therapy for the patient.",
+        "Initiate angiotensin receptor blocker (ARB) or angiotensin converting enzyme (ACE) inhibitor for the patient."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL005",
+      "high_priority_findings": 4,
+      "high_priority_represented": 4,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Initiate statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Initiate angiotensin converting enzyme (ACE) inhibitor for heart failure with reduced ejection fraction.",
+        "Initiate SGLT-2 inhibitors (canagliflozin, dapagliflozin, empagliflozin, ertugliflozin) in symptomatic heart failure with or without reduced ejection fraction regardless of diabetes being present or not.",
+        "Initiate beta-blocker for chronic atrial fibrillation with uncontrolled heart rate."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL006",
+      "high_priority_findings": 14,
+      "high_priority_represented": 10,
+      "completeness": 0.714,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Spironolactone: Risk of hyperkalaemia",
+        "Venlafaxine MR: Risk of serotonin syndrome",
+        "Indapamide: Risk of hyperkalaemia",
+        "Indapamide: Risk of hypotension",
+        "Indapamide: Renal function",
+        "Venlafaxine MR: Serum potassium",
+        "Venlafaxine MR: Serotonin syndrome",
+        "Spironolactone: Serum potassium",
+        "Spironolactone: Renal function",
+        "Losartan: Renal function"
+      ],
+      "missed_findings": [
+        "Metformin: HbA1c",
+        "Empagliflozin: HbA1c",
+        "Isosorbide mononitrate MR: Blood pressure",
+        "Venlafaxine MR: Blood pressure"
+      ]
+    },
+    {
+      "patient_id": "DCKD_EVAL008",
+      "high_priority_findings": 1,
+      "high_priority_represented": 1,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating a selective serotonin reuptake inhibitor (SSRI) or serotonin-norepinephrine reuptake inhibitor (SNRI) for the management of anxiety."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL009",
+      "high_priority_findings": 2,
+      "high_priority_represented": 2,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Metformin: Risk of lactic acidosis",
+        "Metformin: HbA1c"
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL010",
+      "high_priority_findings": 5,
+      "high_priority_represented": 5,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Digoxin: Potential toxicity due to low eGFR",
+        "Mirabegron: Digoxin concentration monitoring",
+        "Consider initiating a cardio-selective beta-blocker (bisoprolol, nebivolol, metoprolol, or carvedilol) for stable heart failure with reduced ejection fraction.",
+        "Consider initiating an SGLT-2 inhibitor (canagliflozin, dapagliflozin, empagliflozin, ertugliflozin) for symptomatic heart failure with or without reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist (spironolactone, eplerenone) in heart failure without severe renal function impairment (eGFR > 30 ml/min/m2)."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL011",
+      "high_priority_findings": 4,
+      "high_priority_represented": 4,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Metformin: Renal Impairment",
+        "Metformin: Renal function monitoring",
+        "Initiate statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Initiate angiotensin receptor blocker (ARB) or Angiotensin Converting Enzyme Inhibitor (ACE-I) in chronic kidney disease with proteinuria."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL012",
+      "high_priority_findings": 5,
+      "high_priority_represented": 4,
+      "completeness": 0.8,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Zopiclone: Increased risk of falls and fractures",
+        "Zopiclone: Falls risk monitoring",
+        "Consider initiating an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist (spironolactone) for heart failure without severe renal function impairment."
+      ],
+      "missed_findings": [
+        "Mirtazapine: Serotonin syndrome monitoring"
+      ]
+    },
+    {
+      "patient_id": "DCKD_EVAL013",
+      "high_priority_findings": 15,
+      "high_priority_represented": 15,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Spironolactone: Risk of hyperkalaemia",
+        "Escitalopram: QT Prolongation",
+        "Losartan: Risk of hypotension",
+        "Spironolactone: Serum potassium",
+        "Escitalopram: QTc interval",
+        "Losartan: Blood pressure",
+        "Consider initiating a selective serotonin reuptake inhibitor (SSRI) or serotonin-norepinephrine reuptake inhibitor (SNRI) for persistent severe anxiety that affects independent functioning and quality of life.",
+        "Consider initiating a dopamine agonist (ropinirole, pramipexole, or rotigotine) for Restless Legs Syndrome, once iron deficiency and severe chronic kidney disease (eGFR < 30 ml/min/m2) have been excluded.",
+        "Consider initiating a phosphate binder in severe chronic kidney disease (eGFR < 30 ml/min/m2) if serum phosphate concentration persistently >1.76 mmol/l (5.5 mg/dl) despite adherence to a renal diet.",
+        "Consider initiating an erythopoietin analogue in severe chronic kidney disease (eGFR < 30 ml/min/m2) with symptomatic anaemia not attributable to haematinic or iron deficiency to achieve a haemoglobin concentration of 10.0 to 12.0 g/dl.",
+        "Consider initiating an angiotensin receptor blocker (ARB) or angiotensin converting enzyme inhibitor (ACE-I) in chronic kidney disease with proteinuria (urine albumin excretion >300 mg/24 hours).",
+        "Consider initiating a long-acting muscarinic antagonist (LAMA) or long-acting beta 2 agonist (LABA) for symptomatic COPD of GOLD 1 or 2 severity and chronic asthma.",
+        "Consider initiating a regular inhaled corticosteroid (ICS) for moderate-severe asthma or COPD of GOLD 3 or 4 severity, where FEV1 <50% of predicted value and repeated exacerbations requiring treatment with oral corticosteroids.",
+        "Consider initiating a selective alpha-1 receptor blocker (e.g., tamsulosin, silodosin) for lower urinary tract symptoms related to benign prostatic hyperplasia where prostatectomy is not considered necessary or appropriate or safe.",
+        "Consider initiating a 5-alpha reductase inhibitor (e.g., finasteride, dutasteride) for lower urinary tract symptoms related to benign prostatic hyperplasia where prostatectomy is not considered necessary or appropriate or safe."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL014",
+      "high_priority_findings": 0,
+      "high_priority_represented": 0,
+      "completeness": 1,
+      "validator_status": "passed",
+      "represented_findings": [],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DCKD_EVAL015",
+      "high_priority_findings": 4,
+      "high_priority_represented": 4,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating sacubitril/valsartan in heart failure with reduced ejection fraction.",
+        "Consider initiating a SGLT-2 inhibitor in heart failure with reduced ejection fraction.",
+        "Consider initiating a cardio-selective beta-blocker (e.g., bisoprolol, nebivolol, metoprolol, or carvedilol) for stable heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist (e.g., spironolactone, eplerenone) in heart failure without severe renal function impairment (eGFR > 30 ml/min/m2)."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL001",
+      "high_priority_findings": 12,
+      "high_priority_represented": 12,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Digoxin: Potential deprescribing opportunity due to lack of clear evidence of benefit in heart failure with normal systolic ventricular function.",
+        "Zolpidem: Potential deprescribing opportunity due to increased risk of falls and fractures.",
+        "Digoxin: Serum potassium monitoring",
+        "Spironolactone: Serum potassium monitoring",
+        "Spironolactone: Serum potassium monitoring",
+        "Doxazosin: Blood pressure monitoring",
+        "Spironolactone: Renal function monitoring",
+        "Zolpidem: Falls risk monitoring",
+        "Spironolactone: Antimuscarinic effects monitoring",
+        "Consider deprescribing Digoxin and switching to cardio-selective beta-blockers if necessary.",
+        "Consider deprescribing Zolpidem and exploring alternative treatments for insomnia that do not carry the same risk of falls and fractures.",
+        "Monitor serum potassium regularly, especially if the patient's eGFR changes."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL002",
+      "high_priority_findings": 9,
+      "high_priority_represented": 9,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Digoxin: Potential for increased mortality and no clear evidence of benefit in heart failure with normal systolic ventricular function",
+        "Citalopram: Potential for serotonin syndrome and increased risk of QT prolongation",
+        "Citalopram: Serotonin Syndrome Monitoring",
+        "Citalopram: QT Interval Monitoring",
+        "Consider initiating a statin therapy for the patient with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Consider initiating an ACE inhibitor for the patient with heart failure with reduced ejection fraction.",
+        "Consider initiating a cardio-selective beta-blocker for the patient with chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating SGLT-2 inhibitors for the patient with symptomatic heart failure with or without reduced ejection fraction.",
+        "Consider initiating a selective alpha-1 receptor blocker for the patient with lower urinary tract symptoms related to benign prostatic hyperplasia."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL003",
+      "high_priority_findings": 17,
+      "high_priority_represented": 16,
+      "completeness": 0.941,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Spironolactone: Risk of hyperkalaemia",
+        "Gabapentin: Risk of serotonin syndrome",
+        "Tramadol: Risk of serotonin syndrome",
+        "Diclofenac gel: Risk of hyponatraemia",
+        "Isosorbide mononitrate MR: Risk of hypotension",
+        "Diclofenac gel: Renal function monitoring",
+        "Diclofenac gel: Blood tests",
+        "Gabapentin: Serotonin syndrome monitoring",
+        "Gabapentin: Serotonin syndrome monitoring",
+        "Lisinopril: Renal function monitoring",
+        "Sotalol: Bradycardia monitoring",
+        "Sotalol: Hypotension monitoring",
+        "Sertraline: Serotonin syndrome monitoring",
+        "Initiate Lisinopril for Ischaemic Heart Disease",
+        "Initiate Sertraline for Depression",
+        "Initiate Sotalol for Chronic Atrial Fibrillation with Uncontrolled Heart Rate"
+      ],
+      "missed_findings": [
+        "Sotalol: Risk of bradycardia"
+      ]
+    },
+    {
+      "patient_id": "DDI_EVAL004",
+      "high_priority_findings": 10,
+      "high_priority_represented": 9,
+      "completeness": 0.9,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Amiodarone: High risk of major side-effects",
+        "Amitriptyline: Exacerbation of cognitive impairment",
+        "Tramadol: Serotonin toxicity risk",
+        "Amiodarone: Electrocardiogram (ECG)",
+        "Amitriptyline: Cognitive function assessment",
+        "Tramadol: Serotonin toxicity monitoring",
+        "Initiate antihypertensive therapy for the patient given a systolic blood pressure of 129 mmHg and diastolic blood pressure of 60 mmHg, which exceeds the threshold for therapy in the absence of established moderate or severe physical frailty.",
+        "Initiate statin therapy for the patient given a documented history of coronary, cerebral, or peripheral vascular disease, unless the patient’s status is end-of-life or established moderate or severe frailty.",
+        "Initiate a regular inhaled corticosteroid for the patient given moderate-severe asthma or COPD of GOLD 3 or 4 severity, where FEV1 <50% of predicted value and repeated exacerbations requiring treatment with oral corticosteroids, as per the START criteria for respiratory system (Criterion 2)."
+      ],
+      "missed_findings": [
+        "Initiate a long-acting muscarinic antagonist (LAMA) for the patient given symptomatic COPD of GOLD 1 or 2 severity, as per the START criteria for respiratory system (Criterion 1)."
+      ]
+    },
+    {
+      "patient_id": "DDI_EVAL005",
+      "high_priority_findings": 4,
+      "high_priority_represented": 4,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Apixaban: Increased bleeding risk",
+        "Apixaban: Renal function monitoring",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating a regular inhaled corticosteroid for moderate-severe asthma or COPD of GOLD 3 or 4 severity, where FEV1 <50% of predicted value and repeated exacerbations requiring treatment with oral corticosteroids."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL007",
+      "high_priority_findings": 11,
+      "high_priority_represented": 11,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Zopiclone: Increased risk of falls and fractures",
+        "Diazepam: Increased risk of falls and fractures",
+        "Naproxen: Renal function monitoring",
+        "Naproxen: Blood pressure monitoring",
+        "Ticagrelor: Heart rate monitoring",
+        "Venlafaxine MR: Thyroid function monitoring",
+        "Diazepam: CNS function monitoring",
+        "Zopiclone: CNS function monitoring",
+        "Lamotrigine: Serotonin syndrome monitoring",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating a vitamin K antagonist or direct thrombin inhibitor or factor Xa inhibitor for chronic or paroxysmal atrial fibrillation."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL008",
+      "high_priority_findings": 15,
+      "high_priority_represented": 13,
+      "completeness": 0.867,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Dabigatran: Increased bleeding risk",
+        "Indapamide: Increased risk of hypokalaemia",
+        "Furosemide: Increased risk of hyponatraemia",
+        "Dabigatran: Blood tests",
+        "Indapamide: Renal function monitoring",
+        "Furosemide: Renal function monitoring",
+        "Duloxetine: Renal function monitoring",
+        "Furosemide: Renal function monitoring",
+        "Sotalol: Blood pressure monitoring",
+        "Consider initiating a statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Consider initiating an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist (e.g., spironolactone) in heart failure without severe renal function impairment.",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate."
+      ],
+      "missed_findings": [
+        "Risperidone: Increased risk of CNS depressant effects",
+        "Risperidone: Symptom monitoring"
+      ]
+    },
+    {
+      "patient_id": "DDI_EVAL009",
+      "high_priority_findings": 18,
+      "high_priority_represented": 15,
+      "completeness": 0.833,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Olanzapine: Potential for urinary retention",
+        "Escitalopram: Risk of serotonin syndrome",
+        "Mirabegron: Increased bleeding risk",
+        "Losartan: Blood pressure monitoring",
+        "Olanzapine: Blood pressure monitoring",
+        "Escitalopram: Serotonin syndrome monitoring",
+        "Mirabegron: Bleeding risk monitoring",
+        "Dabigatran: Bleeding risk monitoring",
+        "Olanzapine: Urinary retention monitoring",
+        "Escitalopram: QT prolongation monitoring",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating vitamin K antagonists or direct thrombin inhibitors or factor Xa inhibitors for chronic or paroxysmal atrial fibrillation.",
+        "Consider initiating a selective serotonin reuptake inhibitor (or SNRI or pregabalin if SSRI contraindicated) for persistent severe anxiety that affects independent functioning and quality of life.",
+        "Consider initiating a selective alpha-1 receptor blocker (e.g., tamsulosin, silodosin) for lower urinary tract symptoms related to benign prostatic hyperplasia where prostatectomy is not considered necessary or appropriate or safe.",
+        "Consider initiating a 5-alpha reductase inhibitor (e.g., finasteride, dutasteride) for lower urinary tract symptoms related to benign prostatic hyperplasia where prostatectomy is not considered necessary or appropriate or safe."
+      ],
+      "missed_findings": [
+        "Losartan: Risk of hypotension",
+        "Consider initiating L-DOPA or a dopamine agonist in idiopathic Parkinson’s disease with functional impairment and resultant disability.",
+        "Consider initiating rivastigmine for Dementia with Lewy Bodies or Parkinson’s disease dementia."
+      ]
+    },
+    {
+      "patient_id": "DDI_EVAL010",
+      "high_priority_findings": 8,
+      "high_priority_represented": 8,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Dabigatran: Increased bleeding risk",
+        "Dabigatran: Increased bleeding risk",
+        "Dabigatran: Increased bleeding risk",
+        "Dabigatran: Bleeding risk monitoring",
+        "Dabigatran: Bleeding risk monitoring",
+        "Dabigatran: Bleeding risk monitoring",
+        "Initiate antihypertensive therapy with sitagliptin and losartan.",
+        "Initiate beta-blocker therapy with propafenone for the patient’s chronic atrial fibrillation with uncontrolled heart rate."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL011",
+      "high_priority_findings": 2,
+      "high_priority_represented": 2,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Losartan: Blood pressure monitoring",
+        "Bisoprolol: Heart rate monitoring"
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL012",
+      "high_priority_findings": 8,
+      "high_priority_represented": 8,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Oxybutynin: Potent antimuscarinic effects with delirium or dementia risk",
+        "Propafenone: Potent antimuscarinic effects with delirium or dementia risk",
+        "Oxybutynin: Cognitive function monitoring",
+        "Propafenone: Cognitive function monitoring",
+        "Consider initiating a long-acting muscarinic antagonist (LAMA) or long-acting beta 2 agonist (LABA) for symptomatic COPD of GOLD 1 or 2 severity and chronic asthma.",
+        "Consider initiating a regular inhaled corticosteroid (e.g., beclomethasone, budesonide, ciclesonide, fluticasone, mometasone) for moderate-severe asthma or COPD of GOLD 3 or 4 severity, where FEV1 <50% of predicted value and repeated exacerbations requiring treatment with oral corticosteroids.",
+        "Consider monitoring cognitive function regularly due to the risk of cognitive impairment associated with the concurrent use of oxybutynin and propafenone.",
+        "Consider monitoring cognitive function regularly due to the risk of cognitive impairment associated with the concurrent use of propafenone and oxybutynin."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL013",
+      "high_priority_findings": 0,
+      "high_priority_represented": 0,
+      "completeness": 1,
+      "validator_status": "passed",
+      "represented_findings": [],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL014",
+      "high_priority_findings": 7,
+      "high_priority_represented": 7,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Sotalol: Potential for QT interval prolongation",
+        "Indapamide: Renal function monitoring",
+        "Ramipril: Renal function monitoring",
+        "Sotalol: Electrocardiogram (ECG) monitoring",
+        "Gabapentin: Electrocardiogram (ECG) monitoring",
+        "Consider initiating an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Consider initiating a cardio-selective beta-blocker for stable heart failure with reduced ejection fraction."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "DDI_EVAL015",
+      "high_priority_findings": 8,
+      "high_priority_represented": 6,
+      "completeness": 0.75,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Amiodarone: High risk of major side-effects",
+        "Duloxetine: Serotonin syndrome",
+        "Apixaban: Serum potassium",
+        "Duloxetine: Serum potassium",
+        "Consider switching from amiodarone to a lower-risk antiarrhythmic therapy, such as beta-blockers, digoxin, verapamil, or diltiazem, if the current benefits do not outweigh the risks.",
+        "Monitor for signs of serotonin syndrome and consider dose reduction or alternative antidepressants if the risk is high. Tapering may be required if discontinuation is necessary."
+      ],
+      "missed_findings": [
+        "Amiodarone: Electrocardiogram (ECG)",
+        "Alfuzosin XL: Blood pressure"
+      ]
+    },
+    {
+      "patient_id": "FRAIL_EVAL001",
+      "high_priority_findings": 6,
+      "high_priority_represented": 6,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Escitalopram: QT Prolongation",
+        "Amisulpride: CNS Depressant Effects",
+        "Amisulpride: CNS Depressant Effects",
+        "Escitalopram: QT Prolongation",
+        "Consider initiating statin therapy for the patient with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Consider initiating antihypertensive therapy for the patient with a systolic blood pressure of 111 mmHg and diastolic blood pressure of 62 mmHg, as the patient does not have established moderate or severe physical frailty."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "FRAIL_EVAL003",
+      "high_priority_findings": 9,
+      "high_priority_represented": 9,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Zolpidem: Increased risk of falls and fractures",
+        "Diazepam: Increased risk of falls and sedation",
+        "Zopiclone: Increased risk of falls and sedation",
+        "Quetiapine: Increased risk of severe extra-pyramidal symptoms",
+        "Zolpidem: Symptom monitoring",
+        "Quetiapine: Symptom monitoring",
+        "Initiate antihypertensive therapy with a medication other than Indapamide.",
+        "Initiate statin therapy with a medication other than Empagliflozin.",
+        "Initiate dopamine agonist therapy with a medication other than Quetiapine."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "FRAIL_EVAL004",
+      "high_priority_findings": 13,
+      "high_priority_represented": 13,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Venlafaxine MR: Potential exacerbation of cognitive impairment",
+        "Tolterodine: Potential increased confusion and agitation",
+        "Bendroflumethiazide: Potential QT prolongation and hypokalaemia",
+        "Umeclidinium/vilanterol: Potential QT prolongation and hypokalaemia",
+        "Tolterodine: Antimuscarinic effects monitoring",
+        "Bendroflumethiazide: Hypokalaemia monitoring",
+        "Bendroflumethiazide: QT interval monitoring",
+        "Umeclidinium/vilanterol: QT interval monitoring",
+        "Consider initiating statin therapy for the patient.",
+        "Consider dose reduction of bendroflumethiazide or alternative diuretics with less risk of QT prolongation and hypokalaemia.",
+        "Consider dose reduction of umecclidinium/vilanterol or alternative bronchodilators with less risk of QT prolongation and hypokalaemia.",
+        "Consider dose reduction of venlafaxine MR or alternative antidepressants with less anticholinergic burden.",
+        "Consider dose reduction of tolterodine or alternative antimuscarinic agents with less cognitive side effects."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "FRAIL_EVAL008",
+      "high_priority_findings": 5,
+      "high_priority_represented": 5,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Oxybutynin: Antimuscarinic Effects",
+        "Sotalol: CNS Depressant Effects",
+        "Umeclidinium/vilanterol: Hypokalaemia and QT Prolongation",
+        "Initiate antihypertensive therapy with an appropriate agent given the patient's systolic blood pressure of 150 mmHg and diastolic blood pressure of 90 mmHg.",
+        "Consider initiating statin therapy given the patient's documented history of coronary, cerebral, or peripheral vascular disease."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "FRAIL_EVAL009",
+      "high_priority_findings": 2,
+      "high_priority_represented": 2,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Initiate antihypertensive therapy with a diuretic (indapamide) and a beta-blocker (diltiazem) for the management of hypertension and atrial fibrillation.",
+        "Initiate statin therapy with a documented history of coronary, cerebral, or peripheral vascular disease."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "FRAIL_EVAL010",
+      "high_priority_findings": 11,
+      "high_priority_represented": 11,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Naproxen: Renal function monitoring",
+        "Naproxen: Serum potassium monitoring",
+        "Naproxen: Hypotension monitoring",
+        "Losartan: Renal function monitoring",
+        "Losartan: Hypotension monitoring",
+        "Tiotropium: Antimuscarinic effects monitoring",
+        "Torasemide: Renal function monitoring",
+        "Torasemide: Serum potassium monitoring",
+        "Torasemide: Hypotension monitoring",
+        "Initiate statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Initiate antihypertensive therapy where systolic blood pressure > 140 mmHg and/or diastolic blood pressure > 90 mmHg."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "FRAIL_EVAL011",
+      "high_priority_findings": 6,
+      "high_priority_represented": 6,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Temazepam: Increased risk of falls and fractures",
+        "Digoxin: No clear evidence of benefit for heart failure with normal systolic ventricular function",
+        "Digoxin: Concentration monitoring",
+        "Consider initiating statin therapy with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Consider initiating beta-blocker therapy for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating vitamin K antagonists or direct thrombin inhibitors or factor Xa inhibitors in the presence of chronic or paroxysmal atrial fibrillation."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "FRAIL_EVAL012",
+      "high_priority_findings": 7,
+      "high_priority_represented": 7,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Levothyroxine 100 micrograms: Thyroid function tests",
+        "Empagliflozin 10 mg: Blood glucose monitoring",
+        "Initiate antihypertensive therapy with a medication such as amlodipine or lisinopril.",
+        "Initiate statin therapy with a medication such as atorvastatin or simvastatin.",
+        "Initiate a phosphate binder such as sevelamer or calcium carbonate for the management of severe chronic kidney disease.",
+        "Initiate erythopoietin analogue therapy to manage symptomatic anaemia in severe chronic kidney disease.",
+        "Initiate an angiotensin receptor blocker (ARB) or angiotensin converting enzyme inhibitor (ACE-I) for the management of chronic kidney disease with proteinuria."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "FRAIL_EVAL013",
+      "high_priority_findings": 16,
+      "high_priority_represented": 5,
+      "completeness": 0.312,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Citalopram: QTc Prolongation",
+        "Duloxetine: QTc Prolongation",
+        "Indapamide: Hypokalaemia",
+        "Furosemide: Hypokalaemia",
+        "Initiate a statin therapy for the patient with a documented history of coronary, cerebral or peripheral vascular disease."
+      ],
+      "missed_findings": [
+        "Risperidone: Hypotension",
+        "Initiate atorvastatin for hypercholesterolemia management.",
+        "Initiate an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Initiate a cardio-selective beta-blocker for stable heart failure with reduced ejection fraction.",
+        "Initiate a mineralocorticoid receptor antagonist in heart failure without severe renal function impairment.",
+        "Initiate SGLT-2 inhibitors in symptomatic heart failure with or without reduced ejection fraction.",
+        "Initiate sacubitril/valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker.",
+        "Initiate intravenous iron for symptomatic heart failure with reduced ejection fraction and iron deficiency.",
+        "Initiate a non-TCA antidepressant for major depression.",
+        "Initiate fibre supplements for diverticulosis with a history of constipation.",
+        "Initiate osmotic laxatives for chronic persistent idiopathic or secondary benign constipation."
+      ]
+    },
+    {
+      "patient_id": "FRAIL_EVAL014",
+      "high_priority_findings": 14,
+      "high_priority_represented": 10,
+      "completeness": 0.714,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Citalopram: QT Prolongation",
+        "Doxazosin: Increased Hypotension Risk",
+        "Zopiclone: Increased Falls Risk",
+        "Citalopram: Electrocardiogram (ECG) monitoring",
+        "Dapagliflozin: Hypoglycaemia monitoring",
+        "Zopiclone: Falls risk monitoring",
+        "Initiate Lisinopril for hypertension management.",
+        "Initiate Dapagliflozin for type 2 diabetes mellitus management.",
+        "Initiate Aclidinium for chronic obstructive pulmonary disease management.",
+        "Initiate Citalopram for depression management."
+      ],
+      "missed_findings": [
+        "Naproxen: Hyponatraemia",
+        "Citalopram: Serotonin Syndrome",
+        "Naproxen: Hyponatraemia monitoring",
+        "Initiate Montelukast for asthma management."
+      ]
+    },
+    {
+      "patient_id": "FRAIL_EVAL015",
+      "high_priority_findings": 12,
+      "high_priority_represented": 11,
+      "completeness": 0.917,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Zopiclone: Increased falls risk",
+        "Dabigatran: Bleeding Risk",
+        "Citalopram: Serotonin Syndrome",
+        "Spironolactone: Hyponatraemia",
+        "Duloxetine: Hyponatraemia",
+        "Zopiclone: Increased Falls Risk",
+        "Initiate lisinopril for hypertension and heart failure management.",
+        "Initiate a statin for the management of cardiovascular risk.",
+        "Initiate an angiotensin-converting enzyme (ACE) inhibitor for heart failure with reduced ejection fraction.",
+        "Initiate a selective beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Monitor serum potassium levels regularly due to the concurrent use of lisinopril and spironolactone."
+      ],
+      "missed_findings": [
+        "Lisinopril: Hyperkalaemia"
+      ]
+    },
+    {
+      "patient_id": "MH_EVAL001",
+      "high_priority_findings": 8,
+      "high_priority_represented": 8,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Zopiclone: Increased risk of falls",
+        "Propafenone: Increased risk of bradycardia",
+        "Gabapentin: Increased risk of hyponatraemia",
+        "Zopiclone: Falls risk assessment",
+        "Consider tapering and discontinuing zopiclone if no longer needed for insomnia.",
+        "Consider tapering and discontinuing propafenone if no longer needed for cardiac arrhythmia.",
+        "Consider tapering and discontinuing gabapentin if no longer needed for chronic pain.",
+        "Assess the patient's falls risk at the next routine review."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MH_EVAL002",
+      "high_priority_findings": 8,
+      "high_priority_represented": 6,
+      "completeness": 0.75,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Zolpidem: Increased risk of falls and fractures",
+        "Amitriptyline: Exacerbation of cognitive impairment and increased falls risk",
+        "Venlafaxine MR: Serotonin syndrome",
+        "Consider initiating a beta-blocker for the management of chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating vitamin K antagonists or direct thrombin inhibitors or factor Xa inhibitors for the management of chronic or paroxysmal atrial fibrillation.",
+        "Consider initiating a selective serotonin reuptake inhibitor (or SNRI or pregabalin if SSRI contraindicated) for the treatment of persistent severe anxiety that affects independent functioning and quality of life."
+      ],
+      "missed_findings": [
+        "Zolpidem: CNS depressant effects",
+        "Amitriptyline: Anticholinergic effects"
+      ]
+    },
+    {
+      "patient_id": "MH_EVAL003",
+      "high_priority_findings": 12,
+      "high_priority_represented": 12,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Fluoxetine: Potential for serotonin syndrome",
+        "Escitalopram: Potential for serotonin syndrome",
+        "Fluoxetine: QT interval prolongation",
+        "Escitalopram: QT interval prolongation",
+        "Fluoxetine: QT interval",
+        "Escitalopram: QT interval",
+        "Fluoxetine: Serotonin syndrome",
+        "Escitalopram: Serotonin syndrome",
+        "Consider tapering and discontinuing fluoxetine to reduce the risk of serotonin syndrome.",
+        "Consider tapering and discontinuing escitalopram to reduce the risk of serotonin syndrome.",
+        "Consider tapering and discontinuing fluoxetine to reduce the risk of QT interval prolongation.",
+        "Consider tapering and discontinuing escitalopram to reduce the risk of QT interval prolongation."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MH_EVAL004",
+      "high_priority_findings": 10,
+      "high_priority_represented": 10,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Duloxetine: Serotonin syndrome risk",
+        "Melatonin MR: Antimuscarinic effects",
+        "Quetiapine: Serotonin syndrome risk",
+        "Diazepam: CNS depressant effects",
+        "Dabigatran: Renal function monitoring",
+        "Duloxetine: Serotonin syndrome monitoring",
+        "Melatonin MR: Antimuscarinic effects monitoring",
+        "Quetiapine: Serotonin syndrome monitoring",
+        "Diazepam: CNS depressant effects monitoring",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MH_EVAL005",
+      "high_priority_findings": 13,
+      "high_priority_represented": 11,
+      "completeness": 0.846,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Sertraline: Potential for serotonin syndrome",
+        "Olanzapine: QT Prolongation",
+        "Olanzapine: Urinary retention risk",
+        "Sertraline and Venlafaxine MR: Serotonin syndrome monitoring",
+        "Olanzapine and Venlafaxine MR: QT interval monitoring",
+        "Initiate antihypertensive therapy with Doxazosin.",
+        "Initiate statin therapy with Olanzapine.",
+        "Initiate L-DOPA or a dopamine agonist for idiopathic Parkinson’s disease.",
+        "Initiate a non-TCA antidepressant for major depression.",
+        "Initiate rivastigmine for Dementia with Lewy Bodies or Parkinson’s disease dementia.",
+        "Initiate a selective serotonin reuptake inhibitor (or SNRI or pregabalin if SSRI contraindicated) for persistent severe anxiety that affects independent functioning and quality of life."
+      ],
+      "missed_findings": [
+        "Sertraline: Electrocardiogram (ECG)",
+        "Olanzapine: Electrocardiogram (ECG)"
+      ]
+    },
+    {
+      "patient_id": "MH_EVAL006",
+      "high_priority_findings": 5,
+      "high_priority_represented": 5,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Consider initiating a cardio-selective beta-blocker for stable heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist in heart failure without severe renal function impairment.",
+        "Consider initiating a SGLT-2 inhibitor for symptomatic heart failure with or without reduced ejection fraction.",
+        "Consider initiating sacubitril/valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MH_EVAL007",
+      "high_priority_findings": 8,
+      "high_priority_represented": 6,
+      "completeness": 0.75,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Citalopram: QTc Prolongation",
+        "Duloxetine: Serotonin Syndrome",
+        "Consider initiating sacubitril/valsartan in heart failure with reduced ejection fraction.",
+        "Consider initiating a cardio-selective beta-blocker (bisoprolol, nebivolol, metoprolol, or carvedilol) for stable heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist (spironolactone, eplerenone) in heart failure without severe renal function impairment (eGFR > 30 ml/min/m2).",
+        "Consider initiating SGLT-2 inhibitors (canagliflozin, dapagliflozin, empagliflozin, ertugliflozin) in symptomatic heart failure with or without reduced ejection fraction regardless of diabetes being present or not."
+      ],
+      "missed_findings": [
+        "Citalopram: Electrocardiogram (ECG)",
+        "Duloxetine: Electrocardiogram (ECG)"
+      ]
+    },
+    {
+      "patient_id": "MH_EVAL008",
+      "high_priority_findings": 3,
+      "high_priority_represented": 3,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Doxazosin: Risk of precipitating recurrent syncope",
+        "Consider prescribing a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider prescribing a vitamin K antagonist or direct thrombin inhibitor or factor Xa inhibitor for chronic or paroxysmal atrial fibrillation."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MH_EVAL009",
+      "high_priority_findings": 13,
+      "high_priority_represented": 11,
+      "completeness": 0.846,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Zolpidem: Increased risk of falls and fractures",
+        "Amitriptyline: Increased risk of cognitive impairment",
+        "Lithium carbonate: Increased risk of QT prolongation",
+        "Zolpidem: CNS depressant effects monitoring",
+        "Lithium carbonate: Serum lithium levels monitoring",
+        "Amitriptyline: Serum potassium levels monitoring",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating vitamin K antagonists or direct thrombin inhibitors or factor Xa inhibitors for chronic or paroxysmal atrial fibrillation.",
+        "Consider initiating a selective serotonin reuptake inhibitor (SSRI) or SNRI or pregabalin for persistent severe anxiety affecting independent functioning and quality of life.",
+        "Monitor serum lithium levels at each follow-up visit due to the risk of toxicity from lithium carbonate.",
+        "Monitor serum potassium levels at each follow-up visit due to the risk of hypokalaemia from amitriptyline."
+      ],
+      "missed_findings": [
+        "Carbamazepine: Liver function monitoring",
+        "Carbamazepine: Renal function monitoring"
+      ]
+    },
+    {
+      "patient_id": "MH_EVAL010",
+      "high_priority_findings": 1,
+      "high_priority_represented": 1,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating statin therapy for the patient."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL001",
+      "high_priority_findings": 0,
+      "high_priority_represented": 0,
+      "completeness": 1,
+      "validator_status": "passed",
+      "represented_findings": [],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL002",
+      "high_priority_findings": 3,
+      "high_priority_represented": 3,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Spironolactone: Risk of dangerous hyperkalaemia",
+        "Ramipril: Serum potassium levels",
+        "Monitor serum potassium levels regularly, at least every 6 months, for the patient with heart failure and concurrent use of Ramipril and Spironolactone."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL003",
+      "high_priority_findings": 8,
+      "high_priority_represented": 8,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Indapamide: Hyponatraemia",
+        "Metformin: Renal Toxicity",
+        "Indapamide: Renal function monitoring",
+        "Ibuprofen gel: Renal function monitoring",
+        "Furosemide: Renal function monitoring",
+        "Metformin: HbA1c monitoring",
+        "Consider reviewing the indication for indapamide and exploring alternative treatments for hypertension, such as less sodium-wasting diuretics or other antihypertensive agents.",
+        "Consider reviewing the indication for metformin and exploring alternative treatments for type 2 diabetes, such as other antidiabetic drugs with a lower risk of lactic acidosis."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL005",
+      "high_priority_findings": 4,
+      "high_priority_represented": 4,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Losartan: Blood pressure monitoring",
+        "Mirtazapine: CNS depressant effects monitoring",
+        "Consider initiating L-DOPA or a dopamine agonist for the management of Parkinson’s disease with functional impairment and resultant disability.",
+        "Consider initiating a non-TCA antidepressant for the management of major depression."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL006",
+      "high_priority_findings": 16,
+      "high_priority_represented": 16,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "QT Prolongation Risk: Amiodarone, escitalopram, and furosemide are all listed in the BNF tables as drugs that can prolong the QT interval. The patient is also taking amiodarone, which is a first-line antiarrhythmic with a higher risk of major side-effects compared to other options. The combination of these medications increases the risk of QT prolongation, which can lead to life-threatening ventricular arrhythmias.",
+        "Serotonin Syndrome Risk: Escitalopram and amiodarone are both listed in the BNF tables as drugs that can cause serotonin syndrome. The concurrent use of these medications increases the risk of serotonin syndrome, which can be life-threatening.",
+        "Increased Bleeding Risk: Amiodarone, furosemide, and tolterodine are all listed in the BNF tables as drugs that increase the risk of bleeding. The combination of these medications increases the risk of bleeding, which can be particularly dangerous in a patient with chronic kidney disease.",
+        "Amiodarone: QT Prolongation Risk",
+        "Escitalopram: Serotonin Syndrome Risk",
+        "Furosemide: Increased Bleeding Risk",
+        "Amiodarone: QT interval monitoring",
+        "Escitalopram: Serotonin syndrome monitoring",
+        "Furosemide: Bleeding risk monitoring",
+        "Consider initiating a selective serotonin reuptake inhibitor (SSRI) or SNRI for persistent severe anxiety that affects independent functioning and quality of life.",
+        "Consider initiating a dopamine agonist (ropinirole, pramipexole, or rotigotine) for Restless Legs Syndrome, once iron deficiency and severe chronic kidney disease have been excluded.",
+        "Consider initiating a phosphate binder in severe chronic kidney disease (eGFR < 30 ml/min/m2) if serum phosphate concentration persistently >1.76 mmol/l (5.5 mg/dl) despite adherence to a renal diet.",
+        "Consider initiating an erythopoietin analogue in severe chronic kidney disease (eGFR < 30 ml/min/m2) with symptomatic anaemia not attributable to haematinic or iron deficiency to achieve a haemoglobin concentration of 10.0 to 12.0 g/dl.",
+        "Consider initiating an angiotensin receptor blocker (ARB) or angiotensin converting enzyme inhibitor (ACE-I) in chronic kidney disease with proteinuria (urine albumin excretion >300 mg/24 hours).",
+        "Consider initiating a selective alpha-1 receptor blocker (e.g., tamsulosin, silodosin) for lower urinary tract symptoms related to benign prostatic hyperplasia where prostatectomy is not considered necessary or appropriate or safe.",
+        "Consider initiating a 5-alpha reductase inhibitor (e.g., finasteride, dutasteride) for lower urinary tract symptoms related to benign prostatic hyperplasia where prostatectomy is not considered necessary or appropriate or safe."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL007",
+      "high_priority_findings": 30,
+      "high_priority_represented": 24,
+      "completeness": 0.8,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Escitalopram: Potential for serotonin syndrome",
+        "Venlafaxine MR: Potential for serotonin syndrome",
+        "Rasagiline: Potential for serotonin syndrome",
+        "Escitalopram: Potential for QT prolongation",
+        "Venlafaxine MR: Potential for QT prolongation",
+        "Rasagiline: Potential for QT prolongation",
+        "Ramipril: Renal function monitoring",
+        "Dapagliflozin: Renal function monitoring",
+        "Torasemide: Renal function monitoring",
+        "Naproxen: Liver function monitoring",
+        "Ramipril: Liver function monitoring",
+        "Rasagiline: Serotonin syndrome monitoring",
+        "Naproxen: Blood pressure monitoring",
+        "Ramipril: Blood pressure monitoring",
+        "Torasemide: Blood pressure monitoring",
+        "Consider initiating sacubitril/valsartan in place of ramipril for the management of heart failure with reduced ejection fraction.",
+        "Consider initiating a cardio-selective beta-blocker (bisoprolol, nebivolol, metoprolol, or carvedilol) for the management of heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist (spironolactone or eplerenone) for the management of heart failure without severe renal function impairment (eGFR > 30 ml/min/m2).",
+        "Consider initiating dapagliflozin for the management of symptomatic heart failure with or without reduced ejection fraction, regardless of diabetes status.",
+        "Consider initiating intravenous iron for the management of symptomatic heart failure with reduced ejection fraction and iron deficiency.",
+        "Consider initiating a non-TCA antidepressant for the management of major depression.",
+        "Consider initiating L-DOPA or a dopamine agonist for the management of idiopathic Parkinson’s disease with functional impairment and resultant disability.",
+        "Consider initiating rivastigmine for the management of dementia with Lewy bodies or Parkinson’s disease dementia.",
+        "Consider initiating a selective serotonin reuptake inhibitor (or SNRI or pregabalin if SSRI contraindicated) for the management of persistent severe anxiety that affects independent functioning and quality of life."
+      ],
+      "missed_findings": [
+        "Escitalopram: Serum potassium monitoring",
+        "Amisulpride: Serum potassium monitoring",
+        "Venlafaxine MR: Serum potassium monitoring",
+        "Escitalopram: QT interval monitoring",
+        "Venlafaxine MR: QT interval monitoring",
+        "Rasagiline: QT interval monitoring"
+      ]
+    },
+    {
+      "patient_id": "MULTI_EVAL008",
+      "high_priority_findings": 6,
+      "high_priority_represented": 6,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Ramipril: Renal function monitoring",
+        "Furosemide: Renal function monitoring",
+        "Bendroflumethiazide: Renal function monitoring",
+        "Initiate Ramipril for hypertension management.",
+        "Initiate Atorvastatin for hypercholesterolemia management.",
+        "Initiate Sacubitril/valsartan for heart failure management."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL009",
+      "high_priority_findings": 13,
+      "high_priority_represented": 12,
+      "completeness": 0.923,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Empagliflozin: Risk of hypotension and hyponatraemia",
+        "Indapamide: Risk of hypotension and hyponatraemia",
+        "Bendroflumethiazide: Risk of hypotension and hyponatraemia",
+        "Empagliflozin: Blood pressure monitoring",
+        "Empagliflozin: Electrolyte monitoring",
+        "Diltiazem MR: Blood pressure monitoring",
+        "Indapamide: Blood pressure monitoring",
+        "Indapamide: Electrolyte monitoring",
+        "Bendroflumethiazide: Blood pressure monitoring",
+        "Bendroflumethiazide: Electrolyte monitoring",
+        "Consider prescribing a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Monitor blood pressure and electrolytes closely for the patient taking multiple antihypertensive medications (Diltiazem MR, Indapamide, Empagliflozin, Bendroflumethiazide)."
+      ],
+      "missed_findings": [
+        "Diltiazem MR: Risk of hypotension"
+      ]
+    },
+    {
+      "patient_id": "MULTI_EVAL010",
+      "high_priority_findings": 2,
+      "high_priority_represented": 2,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Olanzapine: Potential for increased risk of urinary retention",
+        "Consider initiating Sacubitril/Valsartan for the patient's heart failure with reduced ejection fraction."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL011",
+      "high_priority_findings": 6,
+      "high_priority_represented": 6,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Empagliflozin: Hypotension",
+        "Bisoprolol: QT Prolongation",
+        "Empagliflozin: Blood pressure monitoring",
+        "Bisoprolol: QT interval monitoring",
+        "Monitor blood pressure at each follow-up visit.",
+        "Monitor QT interval at each follow-up visit."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL012",
+      "high_priority_findings": 2,
+      "high_priority_represented": 2,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating vitamin K antagonists or direct thrombin inhibitors or factor Xa inhibitors for chronic or paroxysmal atrial fibrillation."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL013",
+      "high_priority_findings": 1,
+      "high_priority_represented": 1,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Ticagrelor: Increased risk of bleeding"
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL014",
+      "high_priority_findings": 2,
+      "high_priority_represented": 2,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist for heart failure without severe renal function impairment."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL015",
+      "high_priority_findings": 8,
+      "high_priority_represented": 8,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Digoxin: Potential for increased risk of adverse effects given the patient's frailty and bradycardia.",
+        "Digoxin: Electrocardiogram (ECG)",
+        "Consider initiating a statin therapy for the patient with a documented history of coronary, cerebral or peripheral vascular disease.",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider initiating vitamin K antagonists or direct thrombin inhibitors or factor Xa inhibitors in the presence of chronic or paroxysmal atrial fibrillation.",
+        "Consider initiating L-DOPA or a dopamine agonist in idiopathic Parkinson’s disease with functional impairment and resultant disability.",
+        "Consider initiating a non-TCA antidepressant for major depression.",
+        "Consider initiating rivastigmine for Dementia with Lewy Bodies or Parkinson’s disease dementia."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL016",
+      "high_priority_findings": 7,
+      "high_priority_represented": 7,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Dabigatran: Potential bleeding risk",
+        "Dabigatran: Renal function monitoring",
+        "Dapagliflozin: Hypoglycaemia monitoring",
+        "Diclofenac gel: Nephrotoxicity monitoring",
+        "Temazepam: Central nervous system depressant effects monitoring",
+        "Paracetamol: Hepatotoxicity monitoring",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL017",
+      "high_priority_findings": 4,
+      "high_priority_represented": 3,
+      "completeness": 0.75,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Spironolactone: Risk of hyperkalaemia",
+        "Naproxen: Risk of hyperkalaemia",
+        "Doxazosin: Risk of hypotension"
+      ],
+      "missed_findings": [
+        "Tiotropium: Exacerbation of glaucoma"
+      ]
+    },
+    {
+      "patient_id": "MULTI_EVAL018",
+      "high_priority_findings": 9,
+      "high_priority_represented": 9,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Digoxin: Unnecessary use in heart failure with normal systolic ventricular function",
+        "Amiodarone: Potential for increased risk of QT prolongation and serotonin syndrome",
+        "Duloxetine: Potential for increased risk of QT prolongation and serotonin syndrome",
+        "Digoxin: Serum digoxin levels",
+        "Amiodarone: QT interval monitoring",
+        "Duloxetine: QT interval monitoring",
+        "Consider dose reduction or discontinuation of digoxin, with close monitoring of heart rate and rhythm.",
+        "Consider dose reduction or discontinuation of amiodarone, with close monitoring of QT interval and serum potassium levels.",
+        "Consider dose reduction or discontinuation of duloxetine, with close monitoring of QT interval and serum potassium levels."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL019",
+      "high_priority_findings": 1,
+      "high_priority_represented": 1,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating antihypertensive therapy with a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "MULTI_EVAL020",
+      "high_priority_findings": 9,
+      "high_priority_represented": 9,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Lactic Acidosis: Metformin is contraindicated in patients with an eGFR < 30 ml/min/1.73m2 due to the risk of lactic acidosis. The patient has an eGFR of 33.0, which is close to the threshold for caution with metformin.",
+        "Metformin: Risk of Lactic Acidosis",
+        "Spironolactone: Renal function monitoring",
+        "Dabigatran: Bleeding risk monitoring",
+        "Consider initiating a cardio-selective beta-blocker (bisoprolol, nebivolol, metoprolol, or carvedilol) for stable heart failure with reduced ejection fraction.",
+        "Consider initiating an SGLT-2 inhibitor (canagliflozin, dapagliflozin, empagliflozin, ertugliflozin) in symptomatic heart failure with or without reduced ejection fraction regardless of diabetes being present or not.",
+        "Consider initiating a mineralocorticoid receptor antagonist (spironolactone, eplerenone) in heart failure without severe renal function impairment i.e., eGFR > 30 ml/min/m2.",
+        "Consider initiating sacubitril/valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker (Sacubitril/valsartan to replace ACE inhibitor or Angiotensin Receptor Blocker).",
+        "Consider initiating a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL001",
+      "high_priority_findings": 2,
+      "high_priority_represented": 2,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider adding tiotropium or formoterol for symptomatic COPD of GOLD 1 or 2 severity and chronic asthma.",
+        "Consider adding a regular inhaled corticosteroid (e.g., beclomethasone, budesonide) for moderate-severe asthma or COPD of GOLD 3 or 4 severity, where FEV1 <50% of predicted value and repeated exacerbations requiring treatment with oral corticosteroids."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL002",
+      "high_priority_findings": 9,
+      "high_priority_represented": 6,
+      "completeness": 0.667,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Citalopram 20 mg once daily: Serotonin Syndrome",
+        "Amisulpride 200 mg twice daily: QT Prolongation",
+        "Citalopram 20 mg once daily: Serum potassium levels",
+        "Zolpidem 5 mg at night: CNS function assessment",
+        "Amisulpride 200 mg twice daily: Serum potassium levels",
+        "Zolpidem 5 mg at night: Serum potassium levels"
+      ],
+      "missed_findings": [
+        "Zolpidem 5 mg at night: CNS Depression",
+        "Citalopram 20 mg once daily: Electrocardiogram (ECG)",
+        "Amisulpride 200 mg twice daily: Electrocardiogram (ECG)"
+      ]
+    },
+    {
+      "patient_id": "RES_EVAL003",
+      "high_priority_findings": 9,
+      "high_priority_represented": 9,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Mirtazapine 15 mg: Potential for increased risk of serotonin syndrome",
+        "Mirtazapine 15 mg: Serotonin syndrome monitoring",
+        "Consider initiating an ACE inhibitor for heart failure with reduced ejection fraction.",
+        "Consider initiating a cardio-selective beta-blocker for stable heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist in heart failure without severe renal function impairment.",
+        "Consider initiating SGLT-2 inhibitors in symptomatic heart failure with or without reduced ejection fraction.",
+        "Consider initiating sacubitril/valsartan in heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker.",
+        "Consider initiating a long-acting muscarinic antagonist (LAMA) or long-acting beta 2 agonist (LABA) for symptomatic COPD of GOLD 1 or 2 severity and chronic asthma.",
+        "Consider initiating a regular inhaled corticosteroid (e.g., beclomethasone, budesonide, ciclesonide, fluticasone, mometasone) for moderate-severe asthma or COPD of GOLD 3 or 4 severity, where FEV1 <50% of predicted value and repeated exacerbations requiring treatment with oral corticosteroids."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL004",
+      "high_priority_findings": 4,
+      "high_priority_represented": 4,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating an ACE inhibitor (e.g., ramipril) for heart failure with reduced ejection fraction.",
+        "Consider initiating a mineralocorticoid receptor antagonist (e.g., spironolactone) for heart failure without severe renal function impairment.",
+        "Consider initiating a SGLT-2 inhibitor (e.g., empagliflozin) for symptomatic heart failure with or without reduced ejection fraction.",
+        "Consider initiating sacubitril/valsartan for heart failure with reduced ejection fraction causing persistent heart failure symptoms despite optimal dose of ACE inhibitor or Angiotensin Receptor Blocker."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL005",
+      "high_priority_findings": 2,
+      "high_priority_represented": 2,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider prescribing a beta-blocker for chronic atrial fibrillation with uncontrolled heart rate.",
+        "Consider prescribing a vitamin K antagonist or direct thrombin inhibitor or factor Xa inhibitor for chronic or paroxysmal atrial fibrillation."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL006",
+      "high_priority_findings": 6,
+      "high_priority_represented": 6,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Sotalol 80 mg twice daily: QT Prolongation",
+        "Duloxetine 60 mg once daily: Serotonin Syndrome",
+        "Citalopram 20 mg once daily: QT Prolongation",
+        "Citalopram 20 mg once daily: QT interval monitoring",
+        "Duloxetine 60 mg once daily: Serotonin syndrome monitoring",
+        "Sotalol 80 mg twice daily: QT interval monitoring"
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL007",
+      "high_priority_findings": 3,
+      "high_priority_represented": 3,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Torasemide 10 mg once daily: Renal function monitoring",
+        "Torasemide 10 mg once daily: Potassium levels",
+        "Trospium 20 mg twice daily: Sodium levels"
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL008",
+      "high_priority_findings": 1,
+      "high_priority_represented": 1,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Consider initiating a selective serotonin reuptake inhibitor (SSRI) or serotonin-norepinephrine reuptake inhibitor (SNRI) for persistent severe anxiety affecting independent functioning and quality of life."
+      ],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL009",
+      "high_priority_findings": 0,
+      "high_priority_represented": 0,
+      "completeness": 1,
+      "validator_status": "passed",
+      "represented_findings": [],
+      "missed_findings": []
+    },
+    {
+      "patient_id": "RES_EVAL010",
+      "high_priority_findings": 14,
+      "high_priority_represented": 14,
+      "completeness": 1.0,
+      "validator_status": "passed",
+      "represented_findings": [
+        "Naproxen 250 mg twice daily: High-risk NSAID with potential for renal impairment and hyperkalaemia",
+        "Spironolactone 25 mg once daily: Renal function monitoring",
+        "Losartan 50 mg once daily: Renal function monitoring",
+        "Naproxen 250 mg twice daily: Renal function monitoring",
+        "Spironolactone 25 mg once daily: Potassium monitoring",
+        "Losartan 50 mg once daily: Potassium monitoring",
+        "Naproxen 250 mg twice daily: Potassium monitoring",
+        "Tamsulosin 400 micrograms once daily: Blood pressure monitoring",
+        "Bisoprolol 2.5 mg once daily: Heart rate monitoring",
+        "Initiate losartan 50 mg once daily for hypertension management.",
+        "Initiate a statin therapy, such as atorvastatin, for the management of cardiovascular risk given the patient's history of chronic obstructive pulmonary disease and recent acute coronary syndrome.",
+        "Initiate a cardio-selective beta-blocker, such as nebivolol, for the management of heart failure with reduced ejection fraction.",
+        "Initiate spironolactone 25 mg once daily for the management of heart failure, given the patient's eGFR of 22.0 and history of heart failure.",
+        "Initiate a selective alpha-1 receptor blocker, such as tamsulosin, for the management of lower urinary tract symptoms related to benign prostatic hyperplasia."
+      ],
+      "missed_findings": []
+    }
+  ]
+}

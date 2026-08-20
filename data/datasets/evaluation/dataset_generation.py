@@ -15,7 +15,7 @@ random.seed(RANDOM_SEED)
 OUTPUT_DIRECTORY = Path(__file__).parent
 
 PATIENT_PATH = OUTPUT_DIRECTORY / 'evaluation_patients.json'
-GROUND_TRUTH_PATH = OUTPUT_DIRECTORY / 'evaluation_ground_truth.json'
+GROUND_TRUTH_PATH = OUTPUT_DIRECTORY / 'evaluation_reference.json'
 
 # scenarios
 ALL_SCENARIOS = (

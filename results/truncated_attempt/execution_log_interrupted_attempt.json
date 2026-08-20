@@ -1,0 +1,667 @@
+[
+  {
+    "patient_id": "CVD_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL013",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owc8AWG-fdNmn-a2cb9fe6a9e94a43)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 31334 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owc8AWG-fdNmn-a2cb9fe6a9e94a43\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 31334 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "CVD_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "CVD_EVAL015",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owc8fkk-4YNCb4-a2cba24dae842039)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 31862 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owc8fkk-4YNCb4-a2cba24dae842039\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 31862 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "DCKD_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL002",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owc9GQo-fdNmn-a2cba5264a7bd6bc)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 28949 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owc9GQo-fdNmn-a2cba5264a7bd6bc\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 28949 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "DCKD_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL004",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "JSONDecodeError",
+    "error": "Expecting ',' delimiter: line 366 column 6 (char 14164)"
+  },
+  {
+    "patient_id": "DCKD_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DCKD_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL003",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcDiE9-4YNCb4-a2cbba532c56db63)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 30538 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcDiE9-4YNCb4-a2cbba532c56db63\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 30538 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "DDI_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL008",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcF8Wq-4YNCb4-a2cbc1145debc958)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29074 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcF8Wq-4YNCb4-a2cbc1145debc958\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29074 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "DDI_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "DDI_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL002",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcHQGk-4YNCb4-a2cbcbe76f63e5f3)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 32774 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcHQGk-4YNCb4-a2cbcbe76f63e5f3\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 32774 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "FRAIL_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL007",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcJi9X-4YNCb4-a2cbd2228a631779)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29169 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcJi9X-4YNCb4-a2cbd2228a631779\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29169 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "FRAIL_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "FRAIL_EVAL014",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcLY6z-4YNCb4-a2cbdad67b75d7aa)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29962 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcLY6z-4YNCb4-a2cbdad67b75d7aa\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29962 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "FRAIL_EVAL015",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcLp47-4YNCb4-a2cbdc256ef4a13a)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 30677 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcLp47-4YNCb4-a2cbdc256ef4a13a\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 30677 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MH_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL003",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcMeAc-4YNCb4-a2cbe0190eb4be87)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29211 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcMeAc-4YNCb4-a2cbe0190eb4be87\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29211 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MH_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL006",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL007",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MH_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL004",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcQbeD-fdNmn-a2cbee2e3d697ffa)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 31026 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcQbeD-fdNmn-a2cbee2e3d697ffa\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 31026 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MULTI_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL006",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcR4Dq-4YNCb4-a2cbf05d5db255c5)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29073 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcR4Dq-4YNCb4-a2cbf05d5db255c5\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29073 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MULTI_EVAL007",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcRJzm-4YNCb4-a2cbf1941aa9ccf6)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29541 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcRJzm-4YNCb4-a2cbf1941aa9ccf6\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29541 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MULTI_EVAL008",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL009",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL010",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL011",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL012",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL013",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL014",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL015",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL016",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL017",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL018",
+    "attempt": 1,
+    "status": "failed",
+    "error_type": "HfHubHTTPError",
+    "error": "Client error '422 Unprocessable Entity' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: owcUTFJ-4YNCb4-a2cc008be8b6356e)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422\n\n{'message': 'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29258 `inputs` tokens and 4000 `max_new_tokens`', 'type': 'invalid_request_error', 'param': None, 'code': None}\n{\n  \"id\": \"owcUTFJ-4YNCb4-a2cc008be8b6356e\",\n  \"error\": {\n    \"message\": \"Input validation error: `inputs` tokens + `max_new_tokens` must be <= 32769. Given: 29258 `inputs` tokens and 4000 `max_new_tokens`\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": null\n  }\n}\n"
+  },
+  {
+    "patient_id": "MULTI_EVAL019",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "MULTI_EVAL020",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL001",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL002",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL003",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL004",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  },
+  {
+    "patient_id": "RES_EVAL005",
+    "attempt": 1,
+    "status": "completed",
+    "error_type": null,
+    "error": null
+  }
+]

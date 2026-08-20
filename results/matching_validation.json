@@ -1,0 +1,728 @@
+{
+  "indications": {
+    "matched": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "medication_name": "Digoxin",
+          "indication": "Atrial fibrillation",
+          "rationale": "Digoxin is commonly used to manage symptoms and control heart rate in patients with atrial fibrillation.",
+          "source": "PATIENT DATA"
+        },
+        "expected": {
+          "medication": "Digoxin",
+          "expected_indication": "Atrial fibrillation",
+          "acceptable_indications": [
+            "Atrial fibrillation"
+          ]
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "medication_name": "Losartan",
+          "indication": "Hypertension",
+          "rationale": "Losartan is an angiotensin II receptor antagonist used to treat hypertension.",
+          "source": "PATIENT DATA"
+        },
+        "expected": {
+          "medication": "Losartan",
+          "expected_indication": "Hypertension",
+          "acceptable_indications": [
+            "Hypertension",
+            "Chronic kidney disease"
+          ]
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "medication_name": "Levothyroxine",
+          "indication": "Hypothyroidism",
+          "rationale": "Levothyroxine is prescribed to replace thyroid hormone in patients with hypothyroidism.",
+          "source": "PATIENT DATA"
+        },
+        "expected": {
+          "medication": "Levothyroxine",
+          "expected_indication": "Hypothyroidism",
+          "acceptable_indications": [
+            "Hypothyroidism",
+            "Hypothyroidism",
+            "Hypothyroidism",
+            "Hypothyroidism",
+            "Hypothyroidism"
+          ]
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "medication_name": "Diclofenac gel",
+          "indication": "Osteoarthritis",
+          "rationale": "Diclofenac gel is used topically to relieve pain and inflammation associated with osteoarthritis.",
+          "source": "PATIENT DATA"
+        },
+        "expected": {
+          "medication": "Diclofenac gel",
+          "expected_indication": "Osteoarthritis",
+          "acceptable_indications": [
+            "Osteoarthritis"
+          ]
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "medication_name": "Fexofenadine",
+          "indication": "Allergic rhinitis",
+          "rationale": "Fexofenadine is an antihistamine used to treat symptoms of allergic rhinitis.",
+          "source": "PATIENT DATA"
+        },
+        "expected": {
+          "medication": "Fexofenadine",
+          "expected_indication": "Allergic rhinitis",
+          "acceptable_indications": [
+            "Allergic rhinitis"
+          ]
+        }
+      }
+    ],
+    "missed": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "medication": "Empagliflozin",
+          "expected_indication": "Chronic kidney disease",
+          "acceptable_indications": [
+            "Chronic kidney disease"
+          ]
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "medication": "Torasemide",
+          "expected_indication": "Peripheral oedema",
+          "acceptable_indications": [
+            "Peripheral oedema"
+          ]
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "expected": {
+          "medication": "Ramipril",
+          "expected_indication": "Heart failure",
+          "acceptable_indications": [
+            "Heart failure"
+          ]
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "expected": {
+          "medication": "Digoxin",
+          "expected_indication": "Atrial fibrillation",
+          "acceptable_indications": [
+            "Atrial fibrillation"
+          ]
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "expected": {
+          "medication": "Ramipril",
+          "expected_indication": "Heart failure",
+          "acceptable_indications": [
+            "Heart failure"
+          ]
+        }
+      }
+    ]
+  },
+  "interactions": {
+    "matched": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "drug_a": "Promethazine",
+          "drug_b": "Fexofenadine",
+          "severity": "moderate",
+          "rationale": "Promethazine and Fexofenadine are both listed in TABLE 11 (CNS depressant effects) and TABLE 10 (antimuscarinics) in the BNF evidence.",
+          "source": "BNF"
+        },
+        "expected": {
+          "drug_a": "Fexofenadine",
+          "drug_b": "Promethazine",
+          "severity": "moderate",
+          "source": "BNF interaction",
+          "interaction_id": "BNF_2003"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "drug_a": "Promethazine",
+          "drug_b": "Trospium",
+          "severity": "moderate",
+          "rationale": "Promethazine and Trospium are both listed in TABLE 10 (drugs with antimuscarinic effects) in the BNF evidence.",
+          "source": "BNF"
+        },
+        "expected": {
+          "drug_a": "Promethazine",
+          "drug_b": "Trospium",
+          "severity": "moderate",
+          "source": "BNF table 10",
+          "effect": "anticholinergic_burden"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "predicted": {
+          "drug_a": "Ramipril 5 mg once daily",
+          "drug_b": "Spironolactone 25 mg once daily",
+          "severity": "moderate",
+          "rationale": "Concurrent use of two or more drugs from the list of drugs that increase serum potassium concentrations might increase the risk of hyperkalaemia.",
+          "source": "BNF"
+        },
+        "expected": {
+          "drug_a": "Ramipril",
+          "drug_b": "Spironolactone",
+          "severity": "moderate",
+          "source": "BNF table 16",
+          "effect": "hyperkalaemia"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL004",
+        "predicted": {
+          "drug_a": "Ramipril",
+          "drug_b": "Spironolactone",
+          "severity": "moderate",
+          "rationale": "Concurrent use of two or more drugs that increase serum potassium concentrations might increase the risk of hyperkalaemia.",
+          "source": "BNF"
+        },
+        "expected": {
+          "drug_a": "Ramipril",
+          "drug_b": "Spironolactone",
+          "severity": "moderate",
+          "source": "BNF table 16",
+          "effect": "hyperkalaemia"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL005",
+        "predicted": {
+          "drug_a": "Ramipril 5 mg once daily",
+          "drug_b": "Spironolactone 25 mg once daily",
+          "severity": "moderate",
+          "rationale": "Concurrent use of two or more drugs that increase serum potassium concentrations might increase the risk of hyperkalaemia.",
+          "source": "BNF"
+        },
+        "expected": {
+          "drug_a": "Ramipril",
+          "drug_b": "Spironolactone",
+          "severity": "moderate",
+          "source": "BNF table 16",
+          "effect": "hyperkalaemia"
+        }
+      }
+    ],
+    "missed": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "drug_a": "Aspirin",
+          "drug_b": "Naproxen",
+          "severity": "moderate",
+          "source": "BNF table 4",
+          "effect": "antiplatelet_effects"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "drug_a": "Empagliflozin",
+          "drug_b": "Losartan",
+          "severity": "moderate",
+          "source": "BNF table 8",
+          "effect": "hypotension"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "drug_a": "Empagliflozin",
+          "drug_b": "Torasemide",
+          "severity": "moderate",
+          "source": "BNF table 8",
+          "effect": "hypotension"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "drug_a": "Losartan",
+          "drug_b": "Torasemide",
+          "severity": "moderate",
+          "source": "BNF table 8",
+          "effect": "hypotension"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "drug_a": "Losartan",
+          "drug_b": "Naproxen",
+          "severity": "moderate",
+          "source": "BNF table 16",
+          "effect": "hyperkalaemia"
+        }
+      }
+    ]
+  },
+  "risks": {
+    "matched": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "risk_type": "Antimuscarinic Effects",
+          "severity": "moderate",
+          "rationale": "The patient is taking Trospium, which is listed in the BNF table as a drug with antimuscarinic effects. The patient is also taking Promethazine, which is listed in the BNF table as a drug with antimuscarinic effects. Concurrent use of these medications may increase the risk of antimuscarinic effects, such as increased confusion and agitation.",
+          "source": "BNF"
+        },
+        "expected": {
+          "risk_type": "anticholinergic_burden",
+          "severity": "moderate",
+          "medications": [
+            "Promethazine",
+            "Trospium"
+          ],
+          "source": "BNF table 10"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "risk_type": "Hypotension",
+          "severity": "moderate",
+          "rationale": "The patient is taking Losartan, which can cause first-dose hypotension, and Empagliflozin, which can cause symptomatic hypotension. These medications, when used together, may increase the risk of hypotension.",
+          "source": "BNF"
+        },
+        "expected": {
+          "risk_type": "hypotension",
+          "severity": "moderate",
+          "medications": [
+            "Empagliflozin",
+            "Losartan",
+            "Torasemide"
+          ],
+          "source": "BNF table 8"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "predicted": {
+          "risk_type": "Hyperkalaemia",
+          "severity": "moderate",
+          "rationale": "Concurrent use of Ramipril 2.5 mg once daily, Ramipril 5 mg once daily, Spironolactone 25 mg once daily, and Diclofenac gel 1.16% when required might increase the risk of hyperkalaemia. The patient has a documented condition of heart failure and is on multiple medications that can increase serum potassium concentrations.",
+          "source": "BNF"
+        },
+        "expected": {
+          "risk_type": "hyperkalaemia",
+          "severity": "moderate",
+          "medications": [
+            "Ramipril",
+            "Spironolactone"
+          ],
+          "source": "BNF table 16"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL003",
+        "predicted": {
+          "risk_type": "Increased hypotension risk",
+          "severity": "moderate",
+          "rationale": "Concurrent use of ramipril, empagliflozin, amisulpride, quetiapine, and zopiclone might increase the risk of hypotension. (BNF)",
+          "source": "BNF"
+        },
+        "expected": {
+          "risk_type": "hypotension",
+          "severity": "moderate",
+          "medications": [
+            "Empagliflozin",
+            "Quetiapine",
+            "Ramipril"
+          ],
+          "source": "BNF table 8"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL005",
+        "predicted": {
+          "risk_type": "Increased risk of hypotension",
+          "severity": "moderate",
+          "rationale": "The patient is taking ramipril 5 mg once daily and furosemide 40 mg once daily, both of which can cause hypotension. Concurrent use of these medications might increase the risk of hypotension.",
+          "source": "PATIENT DATA"
+        },
+        "expected": {
+          "risk_type": "hypotension",
+          "severity": "moderate",
+          "medications": [
+            "Furosemide",
+            "Ramipril",
+            "Spironolactone"
+          ],
+          "source": "BNF table 8"
+        }
+      }
+    ],
+    "missed": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "risk_type": "antiplatelet_effects",
+          "severity": "moderate",
+          "medications": [
+            "Aspirin",
+            "Naproxen"
+          ],
+          "source": "BNF table 4"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "risk_type": "hyperkalaemia",
+          "severity": "moderate",
+          "medications": [
+            "Losartan",
+            "Naproxen"
+          ],
+          "source": "BNF table 16"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "risk_type": "hyponatraemia",
+          "severity": "moderate",
+          "medications": [
+            "Naproxen",
+            "Torasemide"
+          ],
+          "source": "BNF table 18"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "risk_type": "renal_impairment",
+          "severity": "high",
+          "medications": [
+            "Naproxen"
+          ],
+          "source": "STOPP E4"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "expected": {
+          "risk_type": "bradycardia",
+          "severity": "moderate",
+          "medications": [
+            "Bisoprolol",
+            "Digoxin"
+          ],
+          "source": "BNF table 6"
+        }
+      }
+    ]
+  },
+  "deprescribing": {
+    "matched": [
+      {
+        "patient_id": "DCKD_EVAL001",
+        "predicted": {
+          "medication": "Naproxen",
+          "issue": "Nephrotoxicity",
+          "rationale": "Concurrent use of Naproxen with Losartan and Ramipril might increase the risk of nephrotoxicity. (See BNF table 2 for details).",
+          "suggested_action": "Consider dose reduction or deprescribing Naproxen and reassess the patient's pain and inflammation management.",
+          "priority": "Medium",
+          "source": "BNF"
+        },
+        "expected": {
+          "medication": "Naproxen",
+          "reason": "NSAID with eGFR below 50",
+          "source": "STOPP E4"
+        }
+      },
+      {
+        "patient_id": "DDI_EVAL007",
+        "predicted": {
+          "medication": "Naproxen",
+          "issue": "Potential nephrotoxicity and increased risk of bleeding",
+          "rationale": "Naproxen is listed in the BNF table as a drug that causes nephrotoxicity and may increase the risk of bleeding. The patient is also taking other drugs from this list, such as ticagrelor and bisoprolol, which may further increase the risk of bleeding.",
+          "suggested_action": "Consider dose reduction or alternative analgesics with a lower risk of nephrotoxicity and bleeding.",
+          "priority": "MEDIUM",
+          "source": "BNF"
+        },
+        "expected": {
+          "medication": "Naproxen",
+          "reason": "NSAID with eGFR below 50",
+          "source": "STOPP E4"
+        }
+      },
+      {
+        "patient_id": "FRAIL_EVAL010",
+        "predicted": {
+          "medication": "Naproxen",
+          "issue": "Nephrotoxicity",
+          "rationale": "Concurrent use of Naproxen and Losartan, which are both listed in the BNF table of drugs that cause nephrotoxicity, might increase the risk of nephrotoxicity.",
+          "suggested_action": "Consider dose reduction or alternative NSAIDs with lower nephrotoxic risk, such as ibuprofen, or non-pharmacological management of osteoarthritis.",
+          "priority": "MEDIUM",
+          "source": "BNF"
+        },
+        "expected": {
+          "medication": "Naproxen",
+          "reason": "NSAID with eGFR below 50",
+          "source": "STOPP E4"
+        }
+      },
+      {
+        "patient_id": "MULTI_EVAL013",
+        "predicted": {
+          "medication": "Naproxen",
+          "issue": "Potential nephrotoxicity",
+          "rationale": "Naproxen and Losartan are both listed in the nephrotoxicity table (Table 2) in the BNF. Concurrent use might increase the risk of nephrotoxicity.",
+          "suggested_action": "Consider dose reduction or alternative NSAID if possible.",
+          "priority": "Medium",
+          "source": "BNF"
+        },
+        "expected": {
+          "medication": "Naproxen",
+          "reason": "NSAID with eGFR below 50",
+          "source": "STOPP E4"
+        }
+      }
+    ],
+    "missed": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "medication": "Naproxen",
+          "reason": "NSAID with eGFR below 50",
+          "source": "STOPP E4"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "expected": {
+          "medication": "ramipril",
+          "reason": "duplicate regular medication",
+          "source": "STOPP A3"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL005",
+        "expected": {
+          "medication": "ramipril",
+          "reason": "duplicate regular medication",
+          "source": "STOPP A3"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL013",
+        "expected": {
+          "medication": "ramipril",
+          "reason": "duplicate regular medication",
+          "source": "STOPP A3"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL013",
+        "expected": {
+          "medication": "Spironolactone",
+          "reason": "MRA with eGFR below 30",
+          "source": "STOPP E7"
+        }
+      }
+    ]
+  },
+  "monitoring": {
+    "matched": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "medication_or_condition": "Torasemide",
+          "monitoring_required": "Serum sodium levels",
+          "rationale": "Torasemide can cause hyponatremia, and the patient is also taking Losartan and Empagliflozin, which can increase the risk of hyponatremia. Concurrent use of these medications may increase the risk of hyponatremia.",
+          "timeframe": "At least every 3 months",
+          "priority": "Medium",
+          "source": "BNF"
+        },
+        "expected": {
+          "monitoring_required": "serum sodium",
+          "reason": "hyponatraemia risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL007",
+        "predicted": {
+          "medication_or_condition": "Fluoxetine 20 mg once daily",
+          "monitoring_required": "Serum sodium monitoring",
+          "rationale": "Concurrent use of fluoxetine and other drugs that reduce serum potassium (e.g., bendroflumethiazide, spironolactone) might increase the risk of hyponatraemia.",
+          "timeframe": "Every 3 months",
+          "priority": "Medium",
+          "source": "BNF"
+        },
+        "expected": {
+          "monitoring_required": "serum sodium",
+          "reason": "hyponatraemia risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL012",
+        "predicted": {
+          "medication_or_condition": "Amitriptyline",
+          "monitoring_required": "QT interval",
+          "rationale": "Concurrent use of two or more drugs from the list might increase the risk of QT prolongation. The patient is on spironolactone for heart failure and is also taking amitriptyline for chronic pain and flecainide for cardiac arrhythmia, which could exacerbate this risk.",
+          "timeframe": "Regularly",
+          "priority": "HIGH",
+          "source": "BNF"
+        },
+        "expected": {
+          "monitoring_required": "ECG / QT interval review",
+          "reason": "QT prolongation risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL013",
+        "predicted": {
+          "medication_or_condition": "Citalopram",
+          "monitoring_required": "QTc interval",
+          "rationale": "Citalopram is predicted to increase the risk of QT prolongation (see table of drugs that prolong the QT interval).",
+          "timeframe": "if patient has known QTc prolongation",
+          "priority": "Medium",
+          "source": "BNF"
+        },
+        "expected": {
+          "monitoring_required": "ECG / QT interval review",
+          "reason": "QT prolongation risk"
+        }
+      },
+      {
+        "patient_id": "DCKD_EVAL001",
+        "predicted": {
+          "medication_or_condition": "Naproxen",
+          "monitoring_required": "Renal function monitoring",
+          "rationale": "Concurrent use of Naproxen with Losartan and Ramipril might increase the risk of nephrotoxicity. (See BNF table 2 for details).",
+          "timeframe": "At each follow-up visit",
+          "priority": "Medium",
+          "source": "BNF"
+        },
+        "expected": {
+          "monitoring_required": "renal function",
+          "reason": "renal impairment risk"
+        }
+      }
+    ],
+    "missed": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "monitoring_required": "serum potassium and renal function",
+          "reason": "hyperkalaemia risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "monitoring_required": "renal function",
+          "reason": "renal impairment risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "expected": {
+          "monitoring_required": "serum potassium and renal function",
+          "reason": "hyperkalaemia risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL004",
+        "expected": {
+          "monitoring_required": "serum potassium and renal function",
+          "reason": "hyperkalaemia risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL004",
+        "expected": {
+          "monitoring_required": "serum sodium",
+          "reason": "hyponatraemia risk"
+        }
+      }
+    ]
+  },
+  "recommendations": {
+    "matched": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "predicted": {
+          "recommendation": "Monitor serum sodium levels and consider dose reduction or alternative diuretic therapy.",
+          "rationale": "Torasemide can cause hyponatremia, and the patient is also taking Losartan and Empagliflozin, which can increase the risk of hyponatremia. Concurrent use of these medications may increase the risk of hyponatremia.",
+          "priority": "Medium",
+          "source": "BNF"
+        },
+        "expected": {
+          "recommendation_type": "monitoring",
+          "action": "serum sodium",
+          "reason": "hyponatraemia risk"
+        }
+      }
+    ],
+    "missed": [
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "recommendation_type": "medication_review",
+          "medication": "Naproxen",
+          "reason": "NSAID with eGFR below 50"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "recommendation_type": "monitoring",
+          "action": "serum potassium and renal function",
+          "reason": "hyperkalaemia risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL001",
+        "expected": {
+          "recommendation_type": "monitoring",
+          "action": "renal function",
+          "reason": "renal impairment risk"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "expected": {
+          "recommendation_type": "medication_review",
+          "medication": "ramipril",
+          "reason": "duplicate regular medication"
+        }
+      },
+      {
+        "patient_id": "CVD_EVAL002",
+        "expected": {
+          "recommendation_type": "monitoring",
+          "action": "serum potassium and renal function",
+          "reason": "hyperkalaemia risk"
+        }
+      }
+    ]
+  }
+}
