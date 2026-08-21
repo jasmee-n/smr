@@ -5,6 +5,9 @@ import math
 from pathlib import Path
 from difflib import SequenceMatcher
 
+import numpy as np
+from scipy import stats
+
 
 # paths
 PROJECT_ROOT = Path('/data/home/bt25094/dissertation/smr pipeline')
@@ -138,6 +141,47 @@ def wilson_ci(successes, total):
     ]
 
 
+def pearson_ci(x, y):
+    x = np.asarray(x, dtype=float)
+    y = np.asarray(y, dtype=float)
+
+    valid = ~(np.isnan(x) | np.isnan(y))
+    x = x[valid]
+    y = y[valid]
+
+    n = len(x)
+
+    if n < 4 or np.std(x) == 0 or np.std(y) == 0:
+        return {
+            'n': n,
+            'r': None,
+            'p_value': None,
+            'ci_95': [None, None]
+        }
+
+    r, p_value = stats.pearsonr(x, y)
+
+    r_for_ci = np.clip(r, -0.999999, 0.999999)
+    fisher_z = np.arctanh(r_for_ci)
+    standard_error = 1 / np.sqrt(n - 3)
+
+    lower_z = fisher_z - 1.96 * standard_error
+    upper_z = fisher_z + 1.96 * standard_error
+
+    lower_r = np.tanh(lower_z)
+    upper_r = np.tanh(upper_z)
+
+    return {
+        'n': n,
+        'r': round(float(r), 3),
+        'p_value': round(float(p_value), 4),
+        'ci_95': [
+            round(float(lower_r), 3),
+            round(float(upper_r), 3)
+        ]
+    }
+
+
 def execution_metrics(log):
     completed = sum(
         item['status'] == 'completed'
@@ -149,13 +193,19 @@ def execution_metrics(log):
         for item in log
     )
 
+    total = len(log)
+
     return {
-        'total': len(log),
+        'total': total,
         'completed': completed,
         'failed': failed,
         'success_rate': round(
-            completed / len(log),
+            completed / total,
             3
+        ) if total > 0 else 0,
+        'success_ci_95': wilson_ci(
+            completed,
+            total
         )
     }
 
@@ -768,6 +818,7 @@ completed_patients = 0
 failed_patients = 0
 
 case_type_results = []
+patient_level_results = []
 
 
 # evaluate each patient
@@ -850,7 +901,6 @@ for result in results:
         )
     }
 
-
     expected_data = {
         'indications': [
             item
@@ -889,7 +939,6 @@ for result in results:
         )
     }
 
-
     for agent in agents:
         predicted = predicted_data[agent]
         expected = expected_data[agent]
@@ -912,6 +961,33 @@ for result in results:
             'tp': tp,
             'fp': fp,
             'fn': fn
+        })
+
+        raw_medications = state.get(
+            'patient',
+            {}
+        ).get(
+            'raw_medications',
+            []
+        )
+
+        medication_count = len(raw_medications)
+        expected_count = tp + fn
+
+        patient_recall = (
+            tp / expected_count
+            if expected_count > 0
+            else np.nan
+        )
+
+        patient_level_results.append({
+            'patient_id': patient_id,
+            'agent': agent,
+            'medication_count': medication_count,
+            'tp': tp,
+            'fp': fp,
+            'fn': fn,
+            'recall': patient_recall
         })
 
         examples = validation_examples(
@@ -1190,6 +1266,33 @@ for case_type in available_case_types:
         }
 
 
+# medication burden correlation analysis
+medication_burden_correlations = {}
+
+for agent in agents:
+    rows = [
+        row
+        for row in patient_level_results
+        if row['agent'] == agent
+        and not np.isnan(row['recall'])
+    ]
+
+    medication_counts = [
+        row['medication_count']
+        for row in rows
+    ]
+
+    recalls = [
+        row['recall']
+        for row in rows
+    ]
+
+    medication_burden_correlations[agent] = pearson_ci(
+        medication_counts,
+        recalls
+    )
+
+
 # execution reliability
 attempt_1 = execution_metrics(
     log1
@@ -1216,7 +1319,9 @@ metrics = {
         'macro_metrics': macro_metrics
     },
 
-    'case_type_analysis': case_type_metrics
+    'case_type_analysis': case_type_metrics,
+
+    'medication_burden_correlations': medication_burden_correlations
 }
 
 
@@ -1261,14 +1366,16 @@ print(
     f'ATTEMPT 1: '
     f'{attempt_1["completed"]}/'
     f'{attempt_1["total"]} '
-    f'({attempt_1["success_rate"]:.1%})'
+    f'({attempt_1["success_rate"]:.1%}) '
+    f'95% CI={attempt_1["success_ci_95"]}'
 )
 
 print(
     f'ATTEMPT 2: '
     f'{attempt_2["completed"]}/'
     f'{attempt_2["total"]} '
-    f'({attempt_2["success_rate"]:.1%})'
+    f'({attempt_2["success_rate"]:.1%}) '
+    f'95% CI={attempt_2["success_ci_95"]}'
 )
 
 
@@ -1374,6 +1481,29 @@ for case_type, agent_results in case_type_metrics.items():
             f'TP={metric["tp"]} '
             f'FP={metric["fp"]} '
             f'FN={metric["fn"]}'
+        )
+
+
+# print medication burden correlations
+print('\nMEDICATION BURDEN CORRELATIONS:')
+print('-' * 80)
+
+for agent, correlation in medication_burden_correlations.items():
+
+    if correlation['r'] is None:
+        print(
+            f'{agent.upper():20} '
+            f'N={correlation["n"]} '
+            f'Correlation not estimable'
+        )
+
+    else:
+        print(
+            f'{agent.upper():20} '
+            f'N={correlation["n"]:3} '
+            f'r={correlation["r"]:.3f} '
+            f'95% CI={correlation["ci_95"]} '
+            f'p={correlation["p_value"]:.4f}'
         )
 
 

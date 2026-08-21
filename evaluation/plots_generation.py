@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import font_manager
 
+
 # style
 available_fonts = {font.name for font in font_manager.fontManager.ttflist}
 
@@ -31,15 +32,17 @@ plt.rcParams.update({
     'savefig.facecolor': 'white'
 })
 
+
 # paths
 PROJECT_ROOT = Path('/data/home/bt25094/dissertation/smr pipeline')
 
-METRICS_PATH = PROJECT_ROOT/ 'results'/ 'evaluation_metrics.json'
-SUMMARY_PATH = PROJECT_ROOT/ 'results'/ 'summary_evaluation.json'
-STATISTICS_PATH = PROJECT_ROOT/ 'results'/ 'evaluation_statistics.json'
-FIGURES_PATH = PROJECT_ROOT/ 'results'/ 'figures'
+METRICS_PATH = PROJECT_ROOT / 'results' / 'evaluation_metrics.json'
+SUMMARY_PATH = PROJECT_ROOT / 'results' / 'summary_evaluation.json'
+STATISTICS_PATH = PROJECT_ROOT / 'results' / 'evaluation_statistics.json'
+FIGURES_PATH = PROJECT_ROOT / 'results' / 'figures'
 
 FIGURES_PATH.mkdir(parents = True, exist_ok = True)
+
 
 # load metrics
 with METRICS_PATH.open('r', encoding = 'utf-8') as file:
@@ -53,6 +56,7 @@ clinical = results['clinical_evaluation_attempt_2']
 
 metrics = clinical['metrics']
 target_detection = clinical['target_detection']
+
 
 # confidence intervals
 def wilson_interval(successes, total, z = 1.96):
@@ -69,6 +73,7 @@ def wilson_interval(successes, total, z = 1.96):
     ) / denominator
 
     return round(centre - margin, 3), round(centre + margin, 3)
+
 
 # statistics
 clinical_statistics = {
@@ -127,61 +132,180 @@ statistics = {
 with STATISTICS_PATH.open('w', encoding = 'utf-8') as file:
     json.dump(statistics, file, indent = 2, ensure_ascii = False)
 
-# 1. clinical performance
-agents = ['indications', 'interactions']
-labels = ['Indication Agent', 'Interaction Agent']
 
-x = np.arange(len(labels))
+# 1. indication and interaction agent evaluation
+agents = ['indications', 'interactions']
+agent_labels = ['Indication\nAgent', 'Interaction\nAgent']
+
+x = np.arange(len(agent_labels))
 width = 0.23
+
+tp = [metrics[agent]['tp'] for agent in agents]
+fp = [metrics[agent]['fp'] for agent in agents]
+fn = [metrics[agent]['fn'] for agent in agents]
 
 precision = [metrics[agent]['precision'] for agent in agents]
 recall = [metrics[agent]['recall'] for agent in agents]
 f1 = [metrics[agent]['f1'] for agent in agents]
 
-fig, ax = plt.subplots(figsize = (7, 4.5))
+fig, axes = plt.subplots(
+    1,
+    2,
+    figsize = (11, 4.8)
+)
 
-bars = [
-    ax.bar(
-        x - width, precision, width,
-        label = 'Precision',
+
+# A. number of findings
+bars_a = [
+    axes[0].bar(
+        x - width,
+        tp,
+        width,
+        label = 'True Positives',
         facecolor = 'white',
         edgecolor = 'black',
+        linewidth = 1,
         hatch = '//'
     ),
-    ax.bar(
-        x, recall, width,
-        label = 'Recall',
+    axes[0].bar(
+        x,
+        fp,
+        width,
+        label = 'False Positives',
         facecolor = 'white',
         edgecolor = 'black',
+        linewidth = 1,
         hatch = '..'
     ),
-    ax.bar(
-        x + width, f1, width,
-        label = 'F1-Score',
+    axes[0].bar(
+        x + width,
+        fn,
+        width,
+        label = 'False Negatives',
         facecolor = 'white',
         edgecolor = 'black',
+        linewidth = 1,
         hatch = 'xx'
     )
 ]
 
-ax.set_ylabel('Performance Score')
-ax.set_ylim(0, 1.05)
-ax.set_xticks(x, labels)
-ax.legend(frameon = False)
+axes[0].set_ylabel('Number of Findings')
+axes[0].set_xticks(x)
+axes[0].set_xticklabels(agent_labels)
 
-for group in bars:
-    ax.bar_label(group, fmt = '%.3f', padding = 3, fontsize = 9)
+max_count = max(tp + fp + fn)
+axes[0].set_ylim(0, max_count * 1.18)
 
-fig.tight_layout()
+axes[0].legend(
+    frameon = False,
+    loc = 'upper right',
+    fontsize = 9
+)
+
+for group in bars_a:
+    axes[0].bar_label(
+        group,
+        padding = 4,
+        fontsize = 9
+    )
+
+axes[0].text(
+    -0.10,
+    1.04,
+    'A',
+    transform = axes[0].transAxes,
+    fontsize = 12,
+    fontweight = 'bold',
+    va = 'top'
+)
+
+
+# B. precision, recall and F1-score
+bars_b = [
+    axes[1].bar(
+        x - width,
+        precision,
+        width,
+        label = 'Precision',
+        facecolor = 'white',
+        edgecolor = 'black',
+        linewidth = 1,
+        hatch = '//'
+    ),
+    axes[1].bar(
+        x,
+        recall,
+        width,
+        label = 'Recall',
+        facecolor = 'white',
+        edgecolor = 'black',
+        linewidth = 1,
+        hatch = '..'
+    ),
+    axes[1].bar(
+        x + width,
+        f1,
+        width,
+        label = 'F1-Score',
+        facecolor = 'white',
+        edgecolor = 'black',
+        linewidth = 1,
+        hatch = 'xx'
+    )
+]
+
+axes[1].set_ylabel('Performance Score')
+axes[1].set_ylim(0, 1.12)
+axes[1].set_xticks(x)
+axes[1].set_xticklabels(agent_labels)
+
+axes[1].legend(
+    frameon = False,
+    loc = 'upper right',
+    fontsize = 9
+)
+
+for group in bars_b:
+    axes[1].bar_label(
+        group,
+        fmt = '%.3f',
+        padding = 4,
+        fontsize = 9
+    )
+
+axes[1].text(
+    -0.10,
+    1.04,
+    'B',
+    transform = axes[1].transAxes,
+    fontsize = 12,
+    fontweight = 'bold',
+    va = 'top'
+)
+
+
+# formatting
+for ax in axes:
+    ax.tick_params(axis = 'both', labelsize = 9)
+
+fig.subplots_adjust(
+    left = 0.08,
+    right = 0.98,
+    bottom = 0.16,
+    top = 0.92,
+    wspace = 0.30
+)
 
 for extension in ['png', 'pdf']:
     fig.savefig(
-        FIGURES_PATH/ f'clinical_performance.{extension}',
+        FIGURES_PATH / f'indication_interaction_evaluation.{extension}',
         dpi = 300,
         bbox_inches = 'tight'
     )
 
+plt.show()
 plt.close(fig)
+
 
 # 2. reference finding detection and final report completeness
 labels = [
@@ -246,6 +370,7 @@ fig, axes = plt.subplots(
     gridspec_kw = {'width_ratios': [4, 1.3]}
 )
 
+
 # A. reference finding detection
 bars = axes[0].bar(
     labels,
@@ -263,7 +388,7 @@ bars = axes[0].bar(
 )
 
 axes[0].set_ylabel('Reference Findings Detected (%)')
-axes[0].set_ylim(0, 105)
+axes[0].set_ylim(0, 110)
 
 for bar, rate, error in zip(bars, rates, upper):
     axes[0].text(
@@ -277,12 +402,13 @@ for bar, rate, error in zip(bars, rates, upper):
 
 axes[0].text(
     -0.08,
-    1.02,
+    1.03,
     'A',
     transform = axes[0].transAxes,
     fontsize = 12,
     fontweight = 'bold'
 )
+
 
 # B. final report completeness
 bars = axes[1].bar(
@@ -301,7 +427,7 @@ bars = axes[1].bar(
 )
 
 axes[1].set_ylabel('High-Priority Findings Retained (%)')
-axes[1].set_ylim(0, 105)
+axes[1].set_ylim(0, 110)
 
 axes[1].text(
     bars[0].get_x() + bars[0].get_width() / 2,
@@ -314,79 +440,31 @@ axes[1].text(
 
 axes[1].text(
     -0.18,
-    1.02,
+    1.03,
     'B',
     transform = axes[1].transAxes,
     fontsize = 12,
     fontweight = 'bold'
 )
 
-fig.tight_layout()
+fig.subplots_adjust(
+    left = 0.08,
+    right = 0.98,
+    bottom = 0.17,
+    top = 0.92,
+    wspace = 0.35
+)
 
 for extension in ['png', 'pdf']:
     fig.savefig(
-        FIGURES_PATH/ f'clinical_detection_and_final_report.{extension}',
+        FIGURES_PATH / f'clinical_detection_and_final_report.{extension}',
         dpi = 300,
         bbox_inches = 'tight'
     )
 
+plt.show()
 plt.close(fig)
 
-# 3. error distribution
-agents = ['indications', 'interactions']
-labels = ['Indication Agent', 'Interaction Agent']
-
-x = np.arange(len(labels))
-width = 0.23
-
-tp = [metrics[agent]['tp'] for agent in agents]
-fp = [metrics[agent]['fp'] for agent in agents]
-fn = [metrics[agent]['fn'] for agent in agents]
-
-fig, ax = plt.subplots(figsize = (7, 4.5))
-
-bars = [
-    ax.bar(
-        x - width, tp, width,
-        label = 'True Positives',
-        facecolor = 'white',
-        edgecolor = 'black',
-        hatch = '//'
-    ),
-    ax.bar(
-        x, fp, width,
-        label = 'False Positives',
-        facecolor = 'white',
-        edgecolor = 'black',
-        hatch = '..'
-    ),
-    ax.bar(
-        x + width, fn, width,
-        label = 'False Negatives',
-        facecolor = 'white',
-        edgecolor = 'black',
-        hatch = 'xx'
-    )
-]
-
-ax.set_ylabel('Number of Findings')
-ax.set_ylim(0, 760)
-ax.set_xticks(x, labels)
-ax.legend(frameon = False)
-
-for group in bars:
-    ax.bar_label(group, padding = 3, fontsize = 9)
-
-fig.tight_layout()
-
-for extension in ['png', 'pdf']:
-    fig.savefig(
-        FIGURES_PATH/ f'error_distribution.{extension}',
-        dpi = 300,
-        bbox_inches = 'tight'
-    )
-
-plt.close(fig)
 
 # output
 print(f'\nFONT USED: {FONT}')
