@@ -11,7 +11,7 @@ class DDIInteractionAgent:
         self.clinical_knowledge = clinical_knowledge
 
     @traceable(name = 'DDI Interaction Agent', run_type = 'chain')
-    def run(self, state: SMRState):
+    def run(self, state):
         medications = state.medications.medications
 
         bnf_interactions = self.clinical_knowledge.retrieve_bnf_interactions(medications)
@@ -56,14 +56,10 @@ class DDIInteractionAgent:
         * Do not return markdown or explanations outside the JSON.
 
         PERMITTED BNF INTERACTION EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_interactions
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_interactions)}
 
         PERMITTED BNF TABLE EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_tables
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_tables)}
 
         MEDICATIONS:
         {state.medications.model_dump_json(indent = 2)}
@@ -86,9 +82,7 @@ class DDIInteractionAgent:
             end = raw.rfind('}') + 1
 
             if start == -1 or end == 0:
-                raise ValueError(
-                    'DDI INTERACTION AGENT DID NOT RETURN A VALID JSON OBJECT.'
-                )
+                raise ValueError('DDI INTERACTION AGENT DID NOT RETURN A VALID JSON OBJECT.')
 
             return raw[start:end]
 
@@ -111,9 +105,7 @@ class DDIInteractionAgent:
             data = json.loads(raw)
 
         if 'interactions' not in data:
-            data = {
-                'interactions': []
-            }
+            data = {'interactions': []}
 
         for interaction in data.get('interactions', []):
             if not interaction.get('severity'):
