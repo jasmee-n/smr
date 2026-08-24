@@ -110,14 +110,10 @@ class MonitoringAgent:
         * The output must be a single JSON object matching the schema.
 
         PERMITTED BNF TABLE EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_tables
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_tables)}
 
         PERMITTED BNF INTERACTION EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_interactions
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_interactions)}
 
         SMR STATE:
         {convert_smr_state_to_json(state)}
@@ -138,24 +134,17 @@ class MonitoringAgent:
         end = raw.rfind('}') + 1
 
         if start == -1 or end == 0:
-            raise ValueError(
-                'MONITORING AGENT DID NOT RETURN A VALID JSON OBJECT.'
-            )
+            raise ValueError('MONITORING AGENT DID NOT RETURN A VALID JSON OBJECT.')
 
         raw = raw[start:end]
 
         data = json.loads(raw)
 
         if 'medication_or_condition' in data:
-            data = {
-                'monitoring': [data]
-            }
+            data = {'monitoring': [data]}
 
         if 'monitoring' not in data:
-            data = {
-                'monitoring': []
-            }
-
+            data = {'monitoring': []}
         raw = json.dumps(data)
 
         result = MonitoringList.model_validate_json(raw)
