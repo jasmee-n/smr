@@ -76,14 +76,10 @@
         * If no deprescribing opportunities are identified, return an empty deprescribing list.
 
         PERMITTED STOPP EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.stopp
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.stopp)}
 
         PERMITTED BNF TABLE EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_tables
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_tables)}
 
         SMR STATE:
         {convert_smr_state_to_json(state)}
