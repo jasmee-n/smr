@@ -10,7 +10,7 @@ class SummaryAgent:
         self.model = model
 
     @traceable(name = 'Summary Agent', run_type = 'chain')
-    def run(self, state: SMRState):
+    def run(self, state):
 
         prompt = f'''
         You are the Summary Agent in a Structured Medication Review (SMR) pipeline.
@@ -96,9 +96,7 @@ class SummaryAgent:
         end = raw.rfind('}') + 1
 
         if start == -1 or end == 0:
-            raise ValueError(
-                'SUMMARY AGENT DID NOT RETURN A VALID JSON OBJECT.'
-            )
+            raise ValueError('SUMMARY AGENT DID NOT RETURN A VALID JSON OBJECT.')
 
         raw = raw[start:end]
 
@@ -108,7 +106,6 @@ class SummaryAgent:
         state.conclusion = result.conclusion
 
         return state
-
 
 # clinician report generation
 def generate_clinician_report(state, overview, conclusion):
@@ -154,17 +151,13 @@ def generate_clinician_report(state, overview, conclusion):
 
             for finding in findings_for_level:
                 report.append(
-                    f'* {finding_value(finding, "description")}'
-                )
+                    f'* {finding_value(finding, "description")}')
                 report.append(
-                    f'  TYPE: {finding_value(finding, "finding_type")}'
-                )
+                    f'  TYPE: {finding_value(finding, "finding_type")}')
                 report.append(
-                    f'  PRIORITY SCORE: {finding_value(finding, "priority_score")}'
-                )
+                    f'  PRIORITY SCORE: {finding_value(finding, "priority_score")}')
                 report.append(
-                    f'  SOURCE: {finding_value(finding, "source")}'
-                )
+                    f'  SOURCE: {finding_value(finding, "source")}')
     else:
         report.append('NO RANKED CLINICAL FINDINGS AVAILABLE.')
 
@@ -187,12 +180,8 @@ def generate_clinician_report(state, overview, conclusion):
     report.append(f'HBA1C LEVEL: {value(state.patient.hba1c)}')
     report.append(f'EGFR LEVEL: {value(state.patient.egfr)}')
     report.append(f'CREATININE LEVEL: {value(state.patient.creatinine)}')
-    report.append(
-        f'TOTAL CHOLESTEROL LEVEL: {value(state.patient.total_cholesterol)}'
-    )
-    report.append(
-        f'LDL CHOLESTEROL LEVEL: {value(state.patient.ldl_cholesterol)}'
-    )
+    report.append(f'TOTAL CHOLESTEROL LEVEL: {value(state.patient.total_cholesterol)}')
+    report.append(f'LDL CHOLESTEROL LEVEL: {value(state.patient.ldl_cholesterol)}')
     report.append(f'POTASSIUM LEVEL: {value(state.patient.potassium)}')
     report.append(f'HAEMOGLOBIN LEVEL: {value(state.patient.haemoglobin)}')
     report.append(f'SMOKING STATUS: {value(state.patient.smoking_status)}')
@@ -229,15 +218,9 @@ def generate_clinician_report(state, overview, conclusion):
 
     if state.indications.indications:
         for indication in state.indications.indications:
-            report.append(
-                f'* {indication.medication_name}: {indication.indication}'
-            )
-            report.append(
-                f'  RATIONALE: {indication.rationale}'
-            )
-            report.append(
-                f'  SOURCE: {value(indication.source)}'
-            )
+            report.append(f'* {indication.medication_name}: {indication.indication}')
+            report.append(f'  RATIONALE: {indication.rationale}')
+            report.append(f'  SOURCE: {value(indication.source)}')
     else:
         report.append('NO INDICATIONS IDENTIFIED.')
 
@@ -247,18 +230,10 @@ def generate_clinician_report(state, overview, conclusion):
 
     if state.interactions.interactions:
         for interaction in state.interactions.interactions:
-            report.append(
-                f'* {interaction.drug_a.upper()} & {interaction.drug_b.upper()}'
-            )
-            report.append(
-                f'  SEVERITY: {interaction.severity.upper()}'
-            )
-            report.append(
-                f'  RATIONALE: {interaction.rationale}'
-            )
-            report.append(
-                f'  SOURCE: {value(interaction.source)}'
-            )
+            report.append(f'* {interaction.drug_a.upper()} & {interaction.drug_b.upper()}')
+            report.append(f'  SEVERITY: {interaction.severity.upper()}')
+            report.append(f'  RATIONALE: {interaction.rationale}')
+            report.append(f'  SOURCE: {value(interaction.source)}')
     else:
         report.append('NO INTERACTIONS IDENTIFIED.')
 
@@ -281,28 +256,14 @@ def generate_clinician_report(state, overview, conclusion):
 
     if state.deprescribing.deprescribing:
         for medication in state.deprescribing.deprescribing:
-            report.append(
-                f'\nMEDICATION: {medication.medication}'
-            )
-            report.append(
-                f'PRIORITY: {priority_value(medication.priority)}'
-            )
-            report.append(
-                f'ISSUE: {medication.issue}'
-            )
-            report.append(
-                f'RATIONALE: {medication.rationale}'
-            )
-            report.append(
-                f'SUGGESTED ACTION: {medication.suggested_action}'
-            )
-            report.append(
-                f'SOURCE: {value(medication.source)}'
-            )
+            report.append(f'\nMEDICATION: {medication.medication}')
+            report.append(f'PRIORITY: {priority_value(medication.priority)}')
+            report.append(f'ISSUE: {medication.issue}')
+            report.append(f'RATIONALE: {medication.rationale}')
+            report.append(f'SUGGESTED ACTION: {medication.suggested_action}')
+            report.append(f'SOURCE: {value(medication.source)}')
     else:
-        report.append(
-            'NO DEPRESCRIBING OPPORTUNITIES IDENTIFIED.'
-        )
+        report.append('NO DEPRESCRIBING OPPORTUNITIES IDENTIFIED.')
 
     report.append('-' * 60)
 
@@ -310,28 +271,14 @@ def generate_clinician_report(state, overview, conclusion):
 
     if state.monitoring.monitoring:
         for medication in state.monitoring.monitoring:
-            report.append(
-                f'\nMEDICATION/CONDITION: {medication.medication_or_condition}'
-            )
-            report.append(
-                f'PRIORITY: {priority_value(medication.priority)}'
-            )
-            report.append(
-                f'MONITORING REQUIRED: {medication.monitoring_required}'
-            )
-            report.append(
-                f'TIMEFRAME: {value(medication.timeframe)}'
-            )
-            report.append(
-                f'RATIONALE: {medication.rationale}'
-            )
-            report.append(
-                f'SOURCE: {value(medication.source)}'
-            )
+            report.append(f'\nMEDICATION/CONDITION: {medication.medication_or_condition}')
+            report.append(f'PRIORITY: {priority_value(medication.priority)}')
+            report.append(f'MONITORING REQUIRED: {medication.monitoring_required}')
+            report.append(f'TIMEFRAME: {value(medication.timeframe)}')
+            report.append(f'RATIONALE: {medication.rationale}')
+            report.append(f'SOURCE: {value(medication.source)}')
     else:
-        report.append(
-            'NO MONITORING REQUIREMENTS IDENTIFIED.'
-        )
+        report.append('NO MONITORING REQUIREMENTS IDENTIFIED.')
 
     report.append('-' * 60)
 
@@ -339,18 +286,10 @@ def generate_clinician_report(state, overview, conclusion):
 
     if state.recommendations.recommendations:
         for recommendation in state.recommendations.recommendations:
-            report.append(
-                f'\nRECOMMENDATION: {recommendation.recommendation}'
-            )
-            report.append(
-                f'PRIORITY: {priority_value(recommendation.priority)}'
-            )
-            report.append(
-                f'RATIONALE: {recommendation.rationale}'
-            )
-            report.append(
-                f'SOURCE: {value(recommendation.source)}'
-            )
+            report.append(f'\nRECOMMENDATION: {recommendation.recommendation}')
+            report.append(f'PRIORITY: {priority_value(recommendation.priority)}')
+            report.append(f'RATIONALE: {recommendation.rationale}')
+            report.append(f'SOURCE: {value(recommendation.source)}')
     else:
         report.append('NO RECOMMENDATIONS GENERATED.')
 
@@ -370,23 +309,17 @@ def generate_clinician_report(state, overview, conclusion):
     ]
 
     for stage_name, validation in validation_results:
-        report.append(
-            f'{stage_name}: {validation_status(validation)}'
-        )
+        report.append(f'{stage_name}: {validation_status(validation)}')
 
         if validation is not None:
 
             if validation.summary:
-                report.append(
-                    f'  SUMMARY: {validation.summary}'
-                )
+                report.append(f'  SUMMARY: {validation.summary}')
 
             if validation.issues:
                 for issue in validation.issues:
-                    report.append(
-                        f'  * {issue.severity.upper()}: '
-                        f'{issue.description}'
-                    )
+                    report.append(f'  * {issue.severity.upper()}: ')
+                    report.append(f'{issue.description}')
 
     report.append('-' * 60)
 
