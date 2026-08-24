@@ -143,9 +143,7 @@ class InputAgent:
         end = raw.rfind('}') + 1
 
         if start == -1 or end == 0:
-            raise ValueError(
-                'INPUT AGENT DID NOT RETURN A VALID JSON OBJECT.'
-            )
+            raise ValueError('INPUT AGENT DID NOT RETURN A VALID JSON OBJECT.')
 
         raw = raw[start:end]
         data = json.loads(raw)
@@ -186,9 +184,7 @@ class InputAgent:
                     'start_date': None
                 })
 
-            data['medications'] = {
-                'medications': parsed_medications
-            }
+            data['medications'] = {'medications': parsed_medications}
 
         state = SMRState.model_validate(data)
 
