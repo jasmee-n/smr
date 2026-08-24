@@ -28,10 +28,10 @@ llm = HuggingFaceEndpoint(
 
 validator_llm = HuggingFaceEndpoint(
     repo_id=repo_id,
-    max_new_tokens=750,
-    temperature=0,
+    max_new_tokens = 750,
+    temperature = 0,
     huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN,
-    provider='auto'
+    provider = 'auto'
 )
 
 validator_model = ChatHuggingFace(llm = validator_llm)
@@ -40,21 +40,13 @@ model = ChatHuggingFace(llm = llm)
 
 # agents
 input_agent = InputAgent(model = model)
-
 indication_agent = IndicationAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 ddi_interaction_agent = DDIInteractionAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 risk_agent = RiskAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 deprescribing_agent = DeprescribingAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 monitoring_agent = MonitoringAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 recommendation_agent = RecommendationAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 summary_agent = SummaryAgent(model = model)
-
 safety_validator_agent = SafetyValidatorAgent(model = validator_model)
 
 @traceable(name = 'SMR Pipeline', run_type = 'chain')
