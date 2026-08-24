@@ -4,7 +4,6 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
-
 # paths
 BASE_PATH = Path('/data/home/bt25094/dissertation/smr pipeline/data/clinical_database/stopp_start_evidence')
 
@@ -61,9 +60,7 @@ def get_criterion(line):
     }
 
 # PDF extraction
-reader = PdfReader(
-    str(PDF_PATH)
-)
+reader = PdfReader(str(PDF_PATH))
 
 criteria = []
 
@@ -71,47 +68,34 @@ framework = None
 section = None
 current = None
 
-for page_number, page in enumerate(
-    reader.pages,
-    start = 1
-):
+for page_number, page in enumerate(reader.pages, start = 1):
     text = page.extract_text() or ''
 
     for raw_line in text.splitlines():
 
-        line = clean_text(
-            raw_line
-        )
+        line = clean_text(raw_line)
 
         if not line:
             continue
 
-        new_framework = get_framework(
-            line
-        )
+        new_framework = get_framework(line)
 
         if new_framework:
             framework = new_framework
             continue
 
-        new_section = get_section(
-            line
-        )
+        new_section = get_section(line)
 
         if new_section:
             section = new_section
             continue
 
-        new_criterion = get_criterion(
-            line
-        )
+        new_criterion = get_criterion(line)
 
         if new_criterion and framework and section:
 
             if current:
-                criteria.append(
-                    current
-                )
+                criteria.append(current)
 
             current = {
                 'framework': framework,
