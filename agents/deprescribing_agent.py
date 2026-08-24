@@ -16,9 +16,7 @@ class DeprescribingAgent:
 
         stopp_evidence = self.clinical_knowledge.retrieve_stopp(state)
 
-        bnf_tables = self.clinical_knowledge.retrieve_bnf_tables(
-            state.medications.medications
-        )
+        bnf_tables = self.clinical_knowledge.retrieve_bnf_tables(state.medications.medications)
 
         state.clinical_evidence.stopp = stopp_evidence
         state.clinical_evidence.bnf_tables = bnf_tables
@@ -101,14 +99,10 @@ class DeprescribingAgent:
         * If no deprescribing opportunities are identified, return an empty deprescribing list.
 
         PERMITTED STOPP EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.stopp
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.stopp)}
 
         PERMITTED BNF TABLE EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_tables
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_tables)}
 
         SMR STATE:
         {convert_smr_state_to_json(state)}
@@ -130,24 +124,17 @@ class DeprescribingAgent:
         end = raw.rfind('}') + 1
 
         if start == -1 or end == 0:
-            raise ValueError(
-                'DEPRESCRIBING AGENT DID NOT RETURN A VALID JSON OBJECT.'
-            )
+            raise ValueError('DEPRESCRIBING AGENT DID NOT RETURN A VALID JSON OBJECT.')
 
         raw = raw[start:end]
 
         data = json.loads(raw)
 
         if 'medication' in data:
-            data = {
-                'deprescribing': [data]
-            }
+            data = {'deprescribing': [data]}
 
         if 'deprescribing' not in data:
-            data = {
-                'deprescribing': []
-            }
-
+            data = {'deprescribing': []}
         raw = json.dumps(data)
 
         result = DeprescribingList.model_validate_json(raw)
