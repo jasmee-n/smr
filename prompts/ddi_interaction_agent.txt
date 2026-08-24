@@ -33,14 +33,10 @@ prompt = f'''
         * Do not return markdown or explanations outside the JSON.
 
         PERMITTED BNF INTERACTION EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_interactions
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_interactions)}
 
         PERMITTED BNF TABLE EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_tables
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_tables)}
 
         MEDICATIONS:
         {state.medications.model_dump_json(indent = 2)}
