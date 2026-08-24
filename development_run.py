@@ -31,21 +31,13 @@ model = ChatHuggingFace(llm = llm)
 
 # agents
 input_agent = InputAgent(model = model)
-
 indication_agent = IndicationAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 ddi_interaction_agent = DDIInteractionAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 risk_agent = RiskAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 deprescribing_agent = DeprescribingAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 monitoring_agent = MonitoringAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 recommendation_agent = RecommendationAgent(model = model, clinical_knowledge = clinical_knowledge)
-
 summary_agent = SummaryAgent(model = model)
-
 safety_validator_agent = SafetyValidatorAgent(model = model)
 
 @traceable(name = 'SMR Pipeline', run_type = 'chain')
@@ -130,13 +122,7 @@ for patient in patients:
         })
 
     with RESULTS_PATH.open('w', encoding = 'utf-8') as file:
-        json.dump(
-            results,
-            file,
-            indent = 2,
-            ensure_ascii = False,
-            default = str
-        )
+        json.dump(results, file, indent = 2, ensure_ascii = False, default = str)
 
 completed = sum(item['status'] == 'completed' for item in results)
 failed = sum(item['status'] == 'failed'for item in results)
