@@ -1,13 +1,13 @@
-# Secrets
+# secrets
 .env
 *.env
 
-# Python
+# python
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
-# Generated reports
+# generated reports
 reports/
 
 # PDFs
