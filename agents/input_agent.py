@@ -129,7 +129,6 @@ class InputAgent:
         RAW INPUT:
         {raw_input}
         '''
-
         response = self.model.invoke(prompt)
 
         raw = (
@@ -183,7 +182,6 @@ class InputAgent:
                     'route': None,
                     'start_date': None
                 })
-
             data['medications'] = {'medications': parsed_medications}
 
         state = SMRState.model_validate(data)
