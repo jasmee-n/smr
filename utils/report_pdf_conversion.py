@@ -12,7 +12,6 @@ from reportlab.platypus import (
 )
 
 def save_report_as_pdf(report, output_path):
-
     pdf = SimpleDocTemplate(
         str(output_path),
         pagesize = A4,
