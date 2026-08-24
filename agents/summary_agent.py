@@ -4,7 +4,6 @@ from langsmith import traceable
 from schemas import SMRState, ReportSummary
 from utils import convert_smr_state_to_json
 
-
 class SummaryAgent:
     def __init__(self, model):
         self.model = model
