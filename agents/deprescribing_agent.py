@@ -12,7 +12,7 @@ class DeprescribingAgent:
         self.clinical_knowledge = clinical_knowledge
 
     @traceable(name = 'Deprescribing Agent', run_type = 'chain')
-    def run(self, state: SMRState):
+    def run(self, state):
 
         stopp_evidence = self.clinical_knowledge.retrieve_stopp(state)
 
@@ -110,7 +110,6 @@ class DeprescribingAgent:
         JSON SCHEMA:
         {DeprescribingList.model_json_schema()}
         '''
-
         response = self.model.invoke(prompt)
 
         raw = (
