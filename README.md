@@ -6,7 +6,7 @@ This project was developed as part of an **MSc Bioinformatics dissertation**. It
 
 The pipeline assesses medication indications, drug–drug interactions, patient-specific risks, deprescribing considerations, monitoring requirements and recommendations before integrating the findings into a final SMR report.
 
-The system was evaluated using a purpose-built cohort of **100 synthetic patients** with predefined ground-truth findings.
+The system was evaluated using a purpose-built cohort of **100 synthetic patients** with a predefined reference standard.
 
 > **Important:** This repository is an academic research prototype. It is not a validated clinical decision-support system or medical device and must not be used to make decisions about real patients.
 
@@ -874,13 +874,13 @@ The use of different case types allows performance to be assessed beyond straigh
 
 ---
 
-# Ground Truth
+# Reference Standard
 
-Ground truth is generated separately from the patient records supplied to the pipeline.
+Reference standard is generated separately from the patient records supplied to the pipeline.
 
 This prevents expected findings from being directly exposed to the LLM during inference.
 
-Ground-truth targets include clinically relevant scenarios such as:
+Reference standard-truth targets include clinically relevant scenarios such as:
 
 * anticoagulant/antiplatelet bleeding risk
 * anticoagulant/NSAID bleeding risk
@@ -1201,7 +1201,7 @@ to reduce sampling variability.
 
 Pydantic models constrain communication between pipeline components and provide structured output validation.
 
-## Independent Ground Truth
+## Independent Reference Standard
 
 Evaluation targets are stored independently from the patient information supplied to the agents.
 
@@ -1233,11 +1233,11 @@ Dataset generation, evaluation logic, pipeline code, schemas and final result fi
 
 The final evaluation uses synthetic rather than real patient records.
 
-Synthetic cases allow controlled ground-truth evaluation but cannot reproduce the full uncertainty, missing information, documentation variability and longitudinal context present in real clinical records.
+Synthetic cases allow controlled reference standard evaluation but cannot reproduce the full uncertainty, missing information, documentation variability and longitudinal context present in real clinical records.
 
-## Ground-Truth Construction
+## Reference Standard Construction
 
-Ground truth represents predefined expected findings.
+Reference standard represents predefined expected findings.
 
 It cannot represent every clinically reasonable interpretation of a patient, particularly for boundary and complex cases where clinical judgement may differ.
 
@@ -1261,7 +1261,7 @@ Interaction evaluation is affected by:
 * pair matching
 * evidence retrieval
 * representation of interaction mechanisms
-* differences between generated findings and predefined ground truth
+* differences between generated findings and predefined reference standard truth
 
 Interaction identification remained one of the weakest components in the final evaluation.
 
