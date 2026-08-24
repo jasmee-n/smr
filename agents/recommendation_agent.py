@@ -108,9 +108,7 @@ class RecommendationAgent:
         * If no recommendations are supported by the available evidence, return an empty recommendations list.
 
         PERMITTED START EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.start
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.start)}
 
         SMR STATE:
         {convert_smr_state_to_json(state)}
@@ -132,23 +130,17 @@ class RecommendationAgent:
         end = raw.rfind('}') + 1
 
         if start == -1 or end == 0:
-            raise ValueError(
-                'RECOMMENDATION AGENT DID NOT RETURN A VALID JSON OBJECT.'
-            )
+            raise ValueError('RECOMMENDATION AGENT DID NOT RETURN A VALID JSON OBJECT.')
 
         raw = raw[start:end]
 
         data = json.loads(raw)
 
         if 'recommendation' in data:
-            data = {
-                'recommendations': [data]
-            }
+            data = {'recommendations': [data]}
 
         if 'recommendations' not in data:
-            data = {
-                'recommendations': []
-            }
+            data = {'recommendations': []}
 
         raw = json.dumps(data)
 
