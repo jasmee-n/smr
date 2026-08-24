@@ -25,7 +25,6 @@ class SafetyValidatorAgent:
 
     @traceable(name = 'Safety Validator Agent', run_type = 'chain')
     def run(self, state, stage, stage_output, validation_rules = '', evidence: Optional[Any] = None):
-
         stage = stage.strip().lower()
 
         if stage not in self.validation_mapping:
