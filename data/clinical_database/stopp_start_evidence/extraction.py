@@ -6,10 +6,7 @@ from pypdf import PdfReader
 
 
 # paths
-BASE_PATH = Path(
-    '/data/home/bt25094/dissertation/smr pipeline/'
-    'data/clinical_database/stopp_start_evidence'
-)
+BASE_PATH = Path('/data/home/bt25094/dissertation/smr pipeline/data/clinical_database/stopp_start_evidence')
 
 PDF_PATH = BASE_PATH / 'stopp_start.pdf'
 OUTPUT_PATH = BASE_PATH / 'stopp_start_criteria.json'
@@ -131,18 +128,11 @@ for page_number, page in enumerate(
             current['criterion'] += ' ' + line
 
 if current:
-    criteria.append(
-        current
-    )
+    criteria.append(current)
 
 # extraction output
 with OUTPUT_PATH.open('w', encoding = 'utf-8') as file:
-    json.dump(
-        criteria,
-        file,
-        indent = 2,
-        ensure_ascii = False
-    )
+    json.dump(criteria, file, indent = 2, ensure_ascii = False)
 
 print(f'CRITERIA EXTRACTED: {len(criteria)}')
 print(f'SAVED TO: {OUTPUT_PATH}')
