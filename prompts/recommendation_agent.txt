@@ -88,9 +88,7 @@ prompt = f'''
         * If no recommendations are supported by the available evidence, return an empty recommendations list.
 
         PERMITTED START EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.start
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.start)}
 
         SMR STATE:
         {convert_smr_state_to_json(state)}
