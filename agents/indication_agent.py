@@ -89,9 +89,7 @@ class IndicationAgent:
         {medication_names}
 
         PERMITTED BNF EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_tables
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_tables)}
 
         PATIENT:
         {convert_smr_state_to_json(state.patient)}
@@ -115,9 +113,7 @@ class IndicationAgent:
         end = raw.rfind('}') + 1
 
         if start == -1 or end == 0:
-            raise ValueError(
-                'INDICATION AGENT DID NOT RETURN A VALID JSON OBJECT.'
-            )
+            raise ValueError('INDICATION AGENT DID NOT RETURN A VALID JSON OBJECT.')
 
         raw = raw[start:end]
         data = json.loads(raw)
