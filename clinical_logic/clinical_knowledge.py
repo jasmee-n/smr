@@ -2,21 +2,11 @@ import json
 from pathlib import Path
 
 # paths
-BASE_PATH = Path(
-    '/data/home/bt25094/dissertation/smr pipeline/data/clinical_database'
-)
+BASE_PATH = Path('/data/home/bt25094/dissertation/smr pipeline/data/clinical_database')
 
-BNF_PATH = (
-    BASE_PATH
-    / 'bnf_evidence'
-    / 'bnf_evidence.json'
-)
+BNF_PATH = BASE_PATH/ 'bnf_evidence'/ 'bnf_evidence.json'
 
-STOPP_START_PATH = (
-    BASE_PATH
-    / 'stopp_start_evidence'
-    / 'stopp_start_evidence.json'
-)
+STOPP_START_PATH = BASE_PATH/ 'stopp_start_evidence'/ 'stopp_start_evidence.json'
 
 # clinical knowledge
 class ClinicalKnowledge:
