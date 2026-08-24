@@ -7,19 +7,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import font_manager
 
-
 # style
-available_fonts = {font.name for font in font_manager.fontManager.ttflist}
-
-if 'Times New Roman' in available_fonts:
-    FONT = 'Times New Roman'
-elif 'Liberation Serif' in available_fonts:
-    FONT = 'Liberation Serif'
-else:
-    FONT = 'DejaVu Serif'
-
 plt.rcParams.update({
-    'font.family': FONT,
     'font.size': 10,
     'axes.labelsize': 11,
     'axes.edgecolor': 'black',
@@ -32,7 +21,6 @@ plt.rcParams.update({
     'savefig.facecolor': 'white'
 })
 
-
 # paths
 PROJECT_ROOT = Path('/data/home/bt25094/dissertation/smr pipeline')
 
@@ -42,7 +30,6 @@ STATISTICS_PATH = PROJECT_ROOT / 'results' / 'evaluation_statistics.json'
 FIGURES_PATH = PROJECT_ROOT / 'results' / 'figures'
 
 FIGURES_PATH.mkdir(parents = True, exist_ok = True)
-
 
 # load metrics
 with METRICS_PATH.open('r', encoding = 'utf-8') as file:
@@ -56,7 +43,6 @@ clinical = results['clinical_evaluation_attempt_2']
 
 metrics = clinical['metrics']
 target_detection = clinical['target_detection']
-
 
 # confidence intervals
 def wilson_interval(successes, total, z = 1.96):
@@ -74,18 +60,13 @@ def wilson_interval(successes, total, z = 1.96):
 
     return round(centre - margin, 3), round(centre + margin, 3)
 
-
 # statistics
 clinical_statistics = {
     agent: {
         'precision': values['precision'],
-        'precision_95_ci': list(
-            wilson_interval(values['tp'], values['tp'] + values['fp'])
-        ),
+        'precision_95_ci': list(wilson_interval(values['tp'], values['tp'] + values['fp'])),
         'recall': values['recall'],
-        'recall_95_ci': list(
-            wilson_interval(values['tp'], values['tp'] + values['fn'])
-        ),
+        'recall_95_ci': list(wilson_interval(values['tp'], values['tp'] + values['fn'])),
         'f1': values['f1']
     }
     for agent, values in metrics.items()
@@ -133,7 +114,7 @@ with STATISTICS_PATH.open('w', encoding = 'utf-8') as file:
     json.dump(statistics, file, indent = 2, ensure_ascii = False)
 
 
-# 1. indication and interaction agent evaluation
+# plot 1: indication and interaction agent evaluation
 agents = ['indications', 'interactions']
 agent_labels = ['Indication\nAgent', 'Interaction\nAgent']
 
@@ -148,14 +129,9 @@ precision = [metrics[agent]['precision'] for agent in agents]
 recall = [metrics[agent]['recall'] for agent in agents]
 f1 = [metrics[agent]['f1'] for agent in agents]
 
-fig, axes = plt.subplots(
-    1,
-    2,
-    figsize = (11, 4.8)
-)
+fig, axes = plt.subplots(1, 2, figsize = (11, 4.8))
 
-
-# A. number of findings
+# a: number of findings
 bars_a = [
     axes[0].bar(
         x - width,
@@ -219,8 +195,7 @@ axes[0].text(
     va = 'top'
 )
 
-
-# B. precision, recall and F1-score
+# b: precision, recall and F1-score
 bars_b = [
     axes[1].bar(
         x - width,
@@ -283,7 +258,6 @@ axes[1].text(
     va = 'top'
 )
 
-
 # formatting
 for ax in axes:
     ax.tick_params(axis = 'both', labelsize = 9)
@@ -306,8 +280,7 @@ for extension in ['png', 'pdf']:
 plt.show()
 plt.close(fig)
 
-
-# 2. reference finding detection and final report completeness
+# plot 2: reference finding detection and final report completeness
 labels = [
     'Indication\nAgent',
     'Interaction\nAgent',
@@ -370,8 +343,7 @@ fig, axes = plt.subplots(
     gridspec_kw = {'width_ratios': [4, 1.3]}
 )
 
-
-# A. reference finding detection
+# a. reference finding detection
 bars = axes[0].bar(
     labels,
     rates,
@@ -409,8 +381,7 @@ axes[0].text(
     fontweight = 'bold'
 )
 
-
-# B. final report completeness
+# b. final report completeness
 bars = axes[1].bar(
     ['Final\nReport'],
     [summary_rate],
@@ -464,7 +435,6 @@ for extension in ['png', 'pdf']:
 
 plt.show()
 plt.close(fig)
-
 
 # output
 print(f'\nFONT USED: {FONT}')
