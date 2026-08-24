@@ -283,13 +283,9 @@ for patient_id, case in CASES.items():
 
     patient['patient_id'] = patient_id
 
-    patient.update(
-        case['changes']
-    )
+    patient.update(case['changes'])
 
-    patients.append(
-        patient
-    )
+    patients.append(patient)
 
     ground_truth.append({
         'patient_id': patient_id,
@@ -299,17 +295,7 @@ for patient_id, case in CASES.items():
 
 # save
 with PATIENTS_PATH.open('w', encoding = 'utf-8') as file:
-    json.dump(
-        patients,
-        file,
-        indent = 2,
-        ensure_ascii = False
-    )
+    json.dump(patients, file, indent = 2, ensure_ascii = False)
 
 with GROUND_TRUTH_PATH.open('w', encoding = 'utf-8') as file:
-    json.dump(
-        ground_truth,
-        file,
-        indent = 2,
-        ensure_ascii = False
-    )
+    json.dump(ground_truth, file, indent = 2, ensure_ascii = False)
