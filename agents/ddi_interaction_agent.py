@@ -67,7 +67,6 @@ class DDIInteractionAgent:
         JSON SCHEMA:
         {InteractionsList.model_json_schema()}
         '''
-
         def get_response(prompt_text):
             response = self.model.invoke(prompt_text)
 
@@ -100,7 +99,6 @@ class DDIInteractionAgent:
             * Check all commas, brackets, quotation marks and list separators.
             * Do not include any text outside the JSON object.
             '''
-
             raw = get_response(retry_prompt)
             data = json.loads(raw)
 
