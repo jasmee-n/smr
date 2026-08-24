@@ -4,7 +4,6 @@ from pathlib import Path
 
 import pymupdf
 
-
 # paths
 BASE_PATH = Path('/data/home/bt25094/dissertation/smr pipeline/data/clinical_database/bnf_evidence')
 
@@ -14,14 +13,12 @@ BNF_OUTPUT_PATH = BASE_PATH / 'bnf_evidence.json'
 START_PAGE = 1534
 END_PAGE = 1778
 
-
 # severity mapping
 SEVERITY_MAP = {
     'r': 'severe',
     'o': 'moderate',
     'n': 'mild'
 }
-
 
 # text cleaning
 def clean_text(text):
@@ -55,12 +52,7 @@ def is_unwanted_line(line):
 
 def save_json(data, path):
     with path.open('w', encoding = 'utf-8') as file:
-        json.dump(
-            data,
-            file,
-            indent = 2,
-            ensure_ascii = False
-        )
+        json.dump(data, file, indent = 2, ensure_ascii = False)
 
 # page extraction
 def extract_pages():
@@ -124,9 +116,7 @@ def extract_tables(lines):
 
         if table_number:
             if current:
-                tables.append(
-                    current
-                )
+                tables.append(current)
 
             title = re.sub(
                 r'^Table\s*\d{1,2}\s*',
@@ -433,20 +423,14 @@ def extract_interactions(lines):
 
         for section in sections[1:]:
             if current:
-                interactions.append(
-                    create_interaction_record(current, current_page)
-                )
+                interactions.append(create_interaction_record(current, current_page))
 
             current = section.strip()
             current_page = item['page']
 
     if current:
         interactions.append(
-            create_interaction_record(
-                current,
-                current_page
-            )
-        )
+            create_interaction_record(current, current_page))
 
     for number, interaction in enumerate(interactions, start = 0):
         interaction['interaction_id'] = (f'BNF_{number}')
