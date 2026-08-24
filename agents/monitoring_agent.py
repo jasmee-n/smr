@@ -12,7 +12,7 @@ class MonitoringAgent:
         self.clinical_knowledge = clinical_knowledge
 
     @traceable(name = 'Monitoring Agent', run_type = 'chain')
-    def run(self, state: SMRState):
+    def run(self, state):
 
         bnf_tables = self.clinical_knowledge.retrieve_bnf_tables(state.medications.medications)
             
