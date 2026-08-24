@@ -8,7 +8,6 @@ from difflib import SequenceMatcher
 import numpy as np
 from scipy import stats
 
-
 # paths
 PROJECT_ROOT = Path('/data/home/bt25094/dissertation/smr pipeline')
 
@@ -21,7 +20,6 @@ LOG2_PATH = PROJECT_ROOT / 'results' / 'attempt_2' / 'execution_log_attempt_2.js
 
 OUTPUT_PATH = PROJECT_ROOT / 'results' / 'evaluation_metrics.json'
 VALIDATION_PATH = PROJECT_ROOT / 'results' / 'matching_validation.json'
-
 
 # load files
 with RESULTS_PATH.open('r', encoding='utf-8') as file:
@@ -36,12 +34,10 @@ with LOG1_PATH.open('r', encoding='utf-8') as file:
 with LOG2_PATH.open('r', encoding='utf-8') as file:
     log2 = json.load(file)
 
-
 reference_map = {
     patient['patient_id']: patient
     for patient in evaluation_reference
 }
-
 
 # helper functions
 def normalise(text):
@@ -54,7 +50,6 @@ def normalise(text):
 
     return text.strip()
 
-
 def similar(text_a, text_b, threshold=0.70):
     a = normalise(text_a)
     b = normalise(text_b)
@@ -66,7 +61,6 @@ def similar(text_a, text_b, threshold=0.70):
         return True
 
     return SequenceMatcher(None, a, b).ratio() >= threshold
-
 
 def medication_name(text):
     text = normalise(text)
@@ -81,7 +75,6 @@ def medication_name(text):
         name.append(part)
 
     return ' '.join(name)
-
 
 def calculate_metrics(tp, fp, fn):
     precision = (
@@ -111,7 +104,6 @@ def calculate_metrics(tp, fp, fn):
         'f1': round(f1, 3)
     }
 
-
 def wilson_ci(successes, total):
     if total == 0:
         return [0, 0]
@@ -139,7 +131,6 @@ def wilson_ci(successes, total):
         round(lower, 3),
         round(upper, 3)
     ]
-
 
 def pearson_ci(x, y):
     x = np.asarray(x, dtype=float)
@@ -181,7 +172,6 @@ def pearson_ci(x, y):
         ]
     }
 
-
 def execution_metrics(log):
     completed = sum(
         item['status'] == 'completed'
@@ -208,7 +198,6 @@ def execution_metrics(log):
             total
         )
     }
-
 
 def clinical_category(text):
     text = normalise(text)
@@ -257,7 +246,6 @@ def clinical_category(text):
 
     return text
 
-
 def monitoring_category(text):
     text = normalise(text)
 
@@ -284,7 +272,6 @@ def monitoring_category(text):
         return 'glucose'
 
     return text
-
 
 def reason_category(text):
     text = normalise(text)
@@ -318,20 +305,13 @@ def reason_category(text):
 
     return text
 
-
 # matching functions
 def match_indication(predicted, expected):
-    predicted_medication = normalise(
-        predicted.get('medication_name')
-    )
+    predicted_medication = normalise(predicted.get('medication_name'))
 
-    predicted_indication = normalise(
-        predicted.get('indication')
-    )
+    predicted_indication = normalise(predicted.get('indication'))
 
-    expected_medication = normalise(
-        expected.get('medication')
-    )
+    expected_medication = normalise(expected.get('medication'))
 
     expected_indications = expected.get(
         'acceptable_indications',
@@ -357,21 +337,13 @@ def match_indication(predicted, expected):
 
 def match_interaction(predicted, expected):
     predicted_pair = {
-        medication_name(
-            predicted.get('drug_a')
-        ),
-        medication_name(
-            predicted.get('drug_b')
-        )
+        medication_name(predicted.get('drug_a')),
+        medication_name(predicted.get('drug_b'))
     }
 
     expected_pair = {
-        medication_name(
-            expected.get('drug_a')
-        ),
-        medication_name(
-            expected.get('drug_b')
-        )
+        medication_name(expected.get('drug_a')),
+        medication_name(expected.get('drug_b'))
     }
 
     if predicted_pair != expected_pair:
@@ -382,21 +354,15 @@ def match_interaction(predicted, expected):
     if not expected_effect:
         return True
 
-    predicted_effect = clinical_category(
-        predicted.get('rationale', '')
-    )
+    predicted_effect = clinical_category(predicted.get('rationale', ''))
 
-    expected_effect = clinical_category(
-        expected_effect
-    )
+    expected_effect = clinical_category(expected_effect)
 
     return predicted_effect == expected_effect
 
 
 def match_risk(predicted, expected):
-    predicted_risk = clinical_category(
-        predicted.get('risk_type', '')
-    )
+    predicted_risk = clinical_category(predicted.get('risk_type', ''))
 
     expected_risk = clinical_category(
         expected.get(
@@ -429,94 +395,44 @@ def match_risk(predicted, expected):
         for medication in expected_medications
     )
 
-    required_matches = min(
-        2,
-        len(expected_medications)
-    )
+    required_matches = min(2, len(expected_medications))
 
     return medication_matches >= required_matches
 
 
 def match_deprescribing(predicted, expected):
-    predicted_medication = medication_name(
-        predicted.get(
-            'medication',
-            ''
-        )
-    )
+    predicted_medication = medication_name(predicted.get('medication', ''))
 
-    expected_medication = medication_name(
-        expected.get(
-            'medication',
-            ''
-        )
-    )
+    expected_medication = medication_name(expected.get('medication', ''))
 
     predicted_reason = (
         predicted.get('issue', '')
         or predicted.get('rationale', '')
     )
 
-    expected_reason = expected.get(
-        'reason',
-        ''
-    )
+    expected_reason = expected.get('reason', '')
 
-    medication_match = (
-        predicted_medication
-        == expected_medication
-    )
+    medication_match = predicted_medication == expected_medication
 
-    reason_match = (
-        reason_category(predicted_reason)
-        == reason_category(expected_reason)
-    )
+    reason_match = reason_category(predicted_reason) == reason_category(expected_reason
 
     return (
         medication_match
         and reason_match
     )
 
-
 def match_monitoring(predicted, expected):
-    predicted_monitoring = monitoring_category(
-        predicted.get(
-            'monitoring_required',
-            ''
-        )
-    )
+    predicted_monitoring = monitoring_category(predicted.get('monitoring_required', ''))          
+    expected_monitoring = monitoring_category(expected.get('monitoring_required', ''))
 
-    expected_monitoring = monitoring_category(
-        expected.get(
-            'monitoring_required',
-            ''
-        )
-    )
+    predicted_reason = reason_category(predicted.get('rationale', ''))
+    expected_reason = reason_category(expected.get('reason', ''))
 
-    predicted_reason = reason_category(
-        predicted.get(
-            'rationale',
-            ''
-        )
-    )
 
-    expected_reason = reason_category(
-        expected.get(
-            'reason',
-            ''
-        )
-    )
+    monitoring_match = predicted_monitoring == expected_monitoring
 
-    monitoring_match = (
-        predicted_monitoring
-        == expected_monitoring
-    )
-
-    reason_match = (
-        predicted_reason
-        == expected_reason
-    )
-
+    reason_match = predicted_reason == expected_reason
+    
     return (
         monitoring_match
         and reason_match
@@ -524,33 +440,14 @@ def match_monitoring(predicted, expected):
 
 
 def match_recommendation(predicted, expected):
-    predicted_recommendation = normalise(
-        predicted.get(
-            'recommendation',
-            ''
-        )
-    )
+    predicted_recommendation = normalise(predicted.get('recommendation', ''))
 
-    predicted_rationale = predicted.get(
-        'rationale',
-        ''
-    )
+    predicted_rationale = predicted.get('rationale', '')
 
-    expected_reason = expected.get(
-        'reason',
-        ''
-    )
+    expected_reason = expected.get('reason', '')
 
-    if expected.get(
-        'recommendation_type'
-    ) == 'medication_review':
-
-        medication = normalise(
-            expected.get(
-                'medication',
-                ''
-            )
-        )
+    if expected.get('recommendation_type') == 'medication_review':
+        medication = normalise(expected.get('medication', ''))
 
         review_terms = [
             'stop',
@@ -584,14 +481,7 @@ def match_recommendation(predicted, expected):
             )
         )
 
-        reason_match = (
-            reason_category(
-                predicted_rationale
-            )
-            == reason_category(
-                expected_reason
-            )
-        )
+        reason_match = reason_category(predicted_rationale) == reason_category(expected_reason)
 
         return (
             medication_match
@@ -599,35 +489,15 @@ def match_recommendation(predicted, expected):
             and reason_match
         )
 
-    predicted_action = monitoring_category(
-        predicted_recommendation
-    )
+    predicted_action = monitoring_category(predicted_recommendation)
+    expected_action = monitoring_category(expected.get('action', ''))
 
-    expected_action = monitoring_category(
-        expected.get(
-            'action',
-            ''
-        )
-    )
+    predicted_reason = reason_category(predicted_rationale)
+    expected_reason = reason_category(expected_reason)
 
-    predicted_reason = reason_category(
-        predicted_rationale
-    )
-
-    expected_reason = reason_category(
-        expected_reason
-    )
-
-    action_match = (
-        predicted_action
-        == expected_action
-    )
-
-    reason_match = (
-        predicted_reason
-        == expected_reason
-    )
-
+    action_match = predicted_action == expected_action
+    reason_match = predicted_reason == expected_reason
+    
     monitoring_action = (
         'monitor' in predicted_recommendation
         or 'check' in predicted_recommendation
@@ -639,12 +509,7 @@ def match_recommendation(predicted, expected):
         and monitoring_action
     )
 
-
-def compare_findings(
-    predicted,
-    expected,
-    matcher
-):
+def compare_findings(predicted, expected, matcher):
     matched_expected = set()
 
     tp = 0
@@ -676,20 +541,12 @@ def compare_findings(
         if not match_found:
             fp += 1
 
-    fn = (
-        len(expected)
-        - len(matched_expected)
-    )
+    fn = len(expected) - len(matched_expected)
 
     return tp, fp, fn
 
 
-def validation_examples(
-    predicted,
-    expected,
-    matcher,
-    limit=5
-):
+def validation_examples(predicted, expected, matcher, limit = 5):
     matched = []
     missed = []
 
@@ -702,34 +559,24 @@ def validation_examples(
             if expected_index in matched_expected:
                 continue
 
-            if matcher(
-                predicted_item,
-                expected_item
-            ):
+            if matcher(predicted_item, expected_item): 
                 matched.append({
                     'predicted': predicted_item,
                     'expected': expected_item
                 })
 
-                matched_expected.add(
-                    expected_index
-                )
+                matched_expected.add(expected_index)
 
                 break
 
-    for expected_index, expected_item in enumerate(
-        expected
-    ):
+    for expected_index, expected_item in enumerate(expected):
         if expected_index not in matched_expected:
-            missed.append(
-                expected_item
-            )
+            missed.append(expected_item)
 
     return {
         'matched': matched[:limit],
         'missed': missed[:limit]
     }
-
 
 # initialise results
 agents = {
@@ -770,7 +617,6 @@ agents = {
     }
 }
 
-
 validation = {
     'indications': {
         'matched': [],
@@ -803,7 +649,6 @@ validation = {
     }
 }
 
-
 matchers = {
     'indications': match_indication,
     'interactions': match_interaction,
@@ -813,13 +658,11 @@ matchers = {
     'recommendations': match_recommendation
 }
 
-
 completed_patients = 0
 failed_patients = 0
 
 case_type_results = []
 patient_level_results = []
-
 
 # evaluate each patient
 for result in results:
@@ -830,9 +673,7 @@ for result in results:
         continue
 
     if patient_id not in reference_map:
-        print(
-            f'WARNING: NO REFERENCE STANDARD FOR {patient_id}'
-        )
+        print(f'WARNING: NO REFERENCE STANDARD FOR {patient_id}')
         continue
 
     completed_patients += 1
@@ -944,11 +785,7 @@ for result in results:
         expected = expected_data[agent]
         matcher = matchers[agent]
 
-        tp, fp, fn = compare_findings(
-            predicted,
-            expected,
-            matcher
-        )
+        tp, fp, fn = compare_findings(predicted, expected, matcher)
 
         agents[agent]['tp'] += tp
         agents[agent]['fp'] += fp
@@ -963,13 +800,7 @@ for result in results:
             'fn': fn
         })
 
-        raw_medications = state.get(
-            'patient',
-            {}
-        ).get(
-            'raw_medications',
-            []
-        )
+        raw_medications = state.get('patient', {}).get('raw_medications', [])
 
         medication_count = len(raw_medications)
         expected_count = tp + fn
@@ -990,16 +821,10 @@ for result in results:
             'recall': patient_recall
         })
 
-        examples = validation_examples(
-            predicted,
-            expected,
-            matcher
-        )
+        examples = validation_examples(predicted, expected, matcher)
 
         for item in examples['matched']:
-            if len(
-                validation[agent]['matched']
-            ) < 5:
+            if len(validation[agent]['matched']) < 5:
 
                 validation[agent]['matched'].append({
                     'patient_id': patient_id,
@@ -1016,7 +841,6 @@ for result in results:
                     'patient_id': patient_id,
                     'expected': item
                 })
-
 
 # clinical metrics
 clinical_metrics = {
@@ -1044,7 +868,6 @@ for agent, metric in clinical_metrics.items():
         metric['tp'],
         metric['tp'] + metric['fn']
     )
-
 
 # downstream target detection
 target_detection = {
@@ -1087,7 +910,6 @@ target_detection = {
     ]
 }
 
-
 # micro metrics
 micro_tp = sum(
     agents[agent]['tp']
@@ -1113,22 +935,11 @@ micro_fn = sum(
     ]
 )
 
-micro_metrics = calculate_metrics(
-    micro_tp,
-    micro_fp,
-    micro_fn
-)
+micro_metrics = calculate_metrics(micro_tp, micro_fp, micro_fn)
 
-micro_metrics['precision_ci_95'] = wilson_ci(
-    micro_tp,
-    micro_tp + micro_fp
-)
+micro_metrics['precision_ci_95'] = wilson_ci(micro_tp, micro_tp + micro_fp)
 
-micro_metrics['recall_ci_95'] = wilson_ci(
-    micro_tp,
-    micro_tp + micro_fn
-)
-
+micro_metrics['recall_ci_95'] = wilson_ci(micro_tp, micro_tp + micro_fn)
 
 # macro metrics
 macro_metrics = {
@@ -1160,7 +971,6 @@ macro_metrics = {
     )
 }
 
-
 # case-type analysis
 case_type_metrics = {}
 
@@ -1170,7 +980,6 @@ available_case_types = sorted(
         for row in case_type_results
     )
 )
-
 
 for case_type in available_case_types:
     case_type_metrics[case_type] = {}
@@ -1228,13 +1037,9 @@ for case_type in available_case_types:
             )
         )
 
-        case_type_metrics[
-            case_type
-        ][
-            agent
-        ] = {
+        case_type_metrics[case_type][agent] = {
             'patients': patient_count,
-
+            
             'tp': tp,
             'fp': fp,
             'fn': fn,
@@ -1265,7 +1070,6 @@ for case_type in available_case_types:
             )
         }
 
-
 # medication burden correlation analysis
 medication_burden_correlations = {}
 
@@ -1292,16 +1096,9 @@ for agent in agents:
         recalls
     )
 
-
 # execution reliability
-attempt_1 = execution_metrics(
-    log1
-)
-
-attempt_2 = execution_metrics(
-    log2
-)
-
+attempt_1 = execution_metrics(log1)
+attempt_2 = execution_metrics(log2)
 
 # final metrics
 metrics = {
@@ -1320,43 +1117,18 @@ metrics = {
     },
 
     'case_type_analysis': case_type_metrics,
-
     'medication_burden_correlations': medication_burden_correlations
 }
 
 
 # save results
-OUTPUT_PATH.parent.mkdir(
-    parents=True,
-    exist_ok=True
-)
+OUTPUT_PATH.parent.mkdir(parents = True, exist_ok = True)
 
+with OUTPUT_PATH.open('w', encoding = 'utf-8') as file:
+    json.dump(metrics,file, indent = 2, ensure_ascii = False)
 
-with OUTPUT_PATH.open(
-    'w',
-    encoding='utf-8'
-) as file:
-
-    json.dump(
-        metrics,
-        file,
-        indent=2,
-        ensure_ascii=False
-    )
-
-
-with VALIDATION_PATH.open(
-    'w',
-    encoding='utf-8'
-) as file:
-
-    json.dump(
-        validation,
-        file,
-        indent=2,
-        ensure_ascii=False
-    )
-
+with VALIDATION_PATH.open('w', encoding = 'utf-8') as file:
+    json.dump(validation, file, indent = 2, ensure_ascii = False)
 
 # print execution reliability
 print('\nEXECUTION RELIABILITY:')
@@ -1378,7 +1150,6 @@ print(
     f'95% CI={attempt_2["success_ci_95"]}'
 )
 
-
 # print clinical performance
 print('\nCLINICAL PERFORMANCE:')
 print('-' * 80)
@@ -1396,7 +1167,6 @@ for agent, metric in clinical_metrics.items():
         f'FP={metric["fp"]} '
         f'FN={metric["fn"]}'
     )
-
 
 # print target finding detection
 print('\nTARGET FINDING DETECTION:')
@@ -1437,7 +1207,6 @@ print(
     f'{micro_metrics["f1"]:.3f}'
 )
 
-
 # print macro performance
 print('\nMACRO PERFORMANCE:')
 print('-' * 50)
@@ -1457,16 +1226,13 @@ print(
     f'{macro_metrics["f1"]:.3f}'
 )
 
-
 # print case-type performance
 print('\nCASE TYPE PERFORMANCE:')
 print('-' * 110)
 
 for case_type, agent_results in case_type_metrics.items():
 
-    print(
-        f'\n{str(case_type).upper()}'
-    )
+    print(f'\n{str(case_type).upper()}')
 
     for agent, metric in agent_results.items():
 
@@ -1482,7 +1248,6 @@ for case_type, agent_results in case_type_metrics.items():
             f'FP={metric["fp"]} '
             f'FN={metric["fn"]}'
         )
-
 
 # print medication burden correlations
 print('\nMEDICATION BURDEN CORRELATIONS:')
@@ -1505,7 +1270,6 @@ for agent, correlation in medication_burden_correlations.items():
             f'95% CI={correlation["ci_95"]} '
             f'p={correlation["p_value"]:.4f}'
         )
-
 
 print(
     f'\nMETRICS SAVED TO: '
