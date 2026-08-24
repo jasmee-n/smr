@@ -17,9 +17,7 @@ class RiskAgent:
 
         stopp_evidence = self.clinical_knowledge.retrieve_stopp(state)
 
-        bnf_tables = self.clinical_knowledge.retrieve_bnf_tables(
-            state.medications.medications
-        )
+        bnf_tables = self.clinical_knowledge.retrieve_bnf_tables(state.medications.medications)
 
         state.clinical_evidence.stopp = stopp_evidence
         state.clinical_evidence.bnf_tables = bnf_tables
@@ -137,14 +135,10 @@ class RiskAgent:
         * If no clinically relevant risks are identified, return an empty risks list.
 
         PERMITTED STOPP EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.stopp
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.stopp)}
 
         PERMITTED BNF TABLE EVIDENCE:
-        {convert_smr_state_to_json(
-            state.clinical_evidence.bnf_tables
-        )}
+        {convert_smr_state_to_json(state.clinical_evidence.bnf_tables)}
 
         SMR STATE:
         {convert_smr_state_to_json(state)}
@@ -166,9 +160,7 @@ class RiskAgent:
         end = raw.rfind('}') + 1
 
         if start == -1 or end == 0:
-            raise ValueError(
-                'RISK AGENT DID NOT RETURN A VALID JSON OBJECT.'
-            )
+            raise ValueError('RISK AGENT DID NOT RETURN A VALID JSON OBJECT.')
 
         raw = raw[start:end]
 
