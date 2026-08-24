@@ -24,14 +24,7 @@ class SafetyValidatorAgent:
 
 
     @traceable(name = 'Safety Validator Agent', run_type = 'chain')
-    def run(
-        self,
-        state: SMRState,
-        stage: str,
-        stage_output: Any,
-        validation_rules: str = '',
-        evidence: Optional[Any] = None
-    ):
+    def run(self, state, stage, stage_output, validation_rules = '', evidence: Optional[Any] = None):
 
         stage = stage.strip().lower()
 
@@ -166,9 +159,7 @@ class SafetyValidatorAgent:
         end = raw.rfind('}') + 1
 
         if start == -1 or end == 0:
-            raise ValueError(
-                'SAFETY VALIDATOR DID NOT RETURN A VALID JSON OBJECT.'
-            )
+            raise ValueError('SAFETY VALIDATOR DID NOT RETURN A VALID JSON OBJECT.')
 
         raw = raw[start:end]
         data = json.loads(raw)
@@ -185,21 +176,11 @@ class SafetyValidatorAgent:
         if result.stage.strip().lower() != stage:
             result.stage = stage
 
-        self.store_validation_result(
-            state = state,
-            stage = stage,
-            result = result
-        )
+        self.store_validation_result(state, stage, result)
 
         return state
 
 
-    def store_validation_result(
-        self,
-        state: SMRState,
-        stage: str,
-        result: ValidationResult
-    ):
-
+    def store_validation_result(self, state, stage, result):
         validation_field = self.validation_mapping[stage]
         setattr(state, validation_field, result)
